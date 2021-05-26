@@ -4,4 +4,25 @@ class ArticlePolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def create?
+    user.reporter
+  end
+
+  def show?
+    !user.reporter
+  end
+
+  def update?
+    user.reporter
+  end
+
+  def destroy?
+    user.reporter
+  end
+
+  def my_articles?
+    user.reporter
+  end
+  
 end
