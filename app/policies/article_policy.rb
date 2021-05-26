@@ -4,4 +4,13 @@ class ArticlePolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def new?
+    user.reporter
+  end
+
+  def show?
+    !user.reporter
+  end
+
 end

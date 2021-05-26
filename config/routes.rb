@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get 'news', to: 'pages#news'
   get 'profile', to: 'pages#profile'
 
-  resources :articles
+  resources :articles 
   get 'my_articles', to: 'articles#my_articles'
 end

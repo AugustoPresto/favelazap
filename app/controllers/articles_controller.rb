@@ -11,8 +11,20 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    @article = Article.new(article_params)
+    authorize @article
+    if @article.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  def show
+    @article = Article.find(params[:id])
     authorize @article
   end
+
 
   private
 
