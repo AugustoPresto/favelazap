@@ -5,7 +5,7 @@ class ArticlePolicy < ApplicationPolicy
     end
   end
 
-  def new?
+  def create?
     user.reporter
   end
 
@@ -13,4 +13,16 @@ class ArticlePolicy < ApplicationPolicy
     !user.reporter
   end
 
+  def update?
+    user.reporter
+  end
+
+  def destroy?
+    user.reporter
+  end
+
+  def my_articles?
+    user.reporter
+  end
+  
 end
