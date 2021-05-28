@@ -12,6 +12,8 @@ user1 = User.new(
   email: Faker::Internet.email,
   password: "abc123",
   reporter: "true",
+  communities: ["Rocinha", "Vidigal"],
+  interests: ["Sports", "Culture"]
   # first_name: "Felippe",
   # last_name: "Santana"
 )
@@ -21,6 +23,8 @@ user2 = User.new(
   email: Faker::Internet.email,
   password: "abc123",
   reporter: "false",
+  communities: ["Borel", "Macacos"],
+  interests: ["Sports", "Finance"]
   # first_name: "Augusto",
   # last_name: "Souza"
 )
@@ -30,6 +34,8 @@ user3 = User.new(
   email: Faker::Internet.email,
   password: "abc123",
   reporter: "false",
+  communities: ["Antares", "Barbante", "Rola"],
+  interests: ["Security"]
   # first_name: "Pedro",
   # last_name: "Breischiodshisdhg"
 )
@@ -39,6 +45,8 @@ user4 = User.new(
   email: Faker::Internet.email,
   password: "abc123",
   reporter: "false",
+  communities: ["Antares", "Barbante", "Rola"],
+  interests: ["Security"]
   # first_name: "Yuri",
   # last_name: "Gravatá"
 )
