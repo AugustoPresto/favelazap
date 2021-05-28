@@ -1,1 +1,17 @@
 <h1>Show page</h1>
+
+<% @articles.each do |article| %>
+  <p><%= article.title %></p>
+  <p><%= article.subtitle %></p>
+  <p><%= article.content %></p>
+  <p><%= article.communities %></p>
+  <p><%= article.interests %></p>
+<% end %>
+
+
+<header>
+  <h1 class="text-left"><%= @article.title %></h1>
+  <h2><%= @article.subtitle %></h2>
+
+  <p><%= @article.content %></p>
+</header>
