@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :subtitle, :content, communities: [], interests: [], :photo)
+    params.require(:article).permit(:title, :subtitle, :content, :photo, communities: [], interests: [])
   end
 
   def set_article
