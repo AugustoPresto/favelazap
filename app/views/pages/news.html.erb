@@ -1,7 +1,15 @@
-<% @user_articles.each do |article| %>
-  <p><%= article.title %></p>
-  <p><%= article.subtitle %></p>
-  <p><%= article.content %></p>
-  <p><%= article.communities %></p>
-  <p><%= article.interests %></p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @user_articles.each do |article| %>
+      <div class="col-12">
+        <div class="card shadow-sm border">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><strong><%= article.title.truncate(60) %></strong></p>
+          </div>
+          <p class="created-at"><%= article.created_at.strftime("%e %B %Y") %></p>
+        </div>
+      </div>
+    <% end %>  
+  </div>
+</div>

@@ -24,5 +24,8 @@ class ArticlePolicy < ApplicationPolicy
   def my_articles?
     user.reporter
   end
-  
+
+  def news?
+    !user.reporter
+  end
 end
