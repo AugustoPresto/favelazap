@@ -1,0 +1,48 @@
+.banner {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  background-color: $logo-green;
+  width: 100%;
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.headline {
+  display: flex;
+  align-items: center;
+}
+
+.headline h1 {
+  color: $page-white;
+  font-size: 9vw;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.headline h2 {
+  color: $logo-dark-green;
+  font-size: 5vw;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.logos {
+  margin: 0;
+  color: white;
+  font-size: 44px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.donwload {
+  padding: 20px;
+}
