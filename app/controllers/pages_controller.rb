@@ -8,6 +8,7 @@ class PagesController < ApplicationController
     @user_articles = @articles.select do |article|
       !(user.communities & article.communities).empty? && !(user.interests & article.interests).empty?
     end
+    authorize @user_articles
   end
 
   def profile
