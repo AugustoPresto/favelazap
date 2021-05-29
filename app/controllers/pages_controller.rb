@@ -4,11 +4,11 @@ class PagesController < ApplicationController
 
   def news
     user = current_user
-    @articles = policy_scope(Article).order(created_at: :desc)
-    @user_articles = @articles.select do |article|
+    @all_articles = policy_scope(Article).order(created_at: :desc)
+    @articles = @articles.select do |article|
       !(user.communities & article.communities).empty? && !(user.interests & article.interests).empty?
     end
-    authorize @user_articles
+    authorize @articles
   end
 
   def profile
