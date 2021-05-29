@@ -1,1 +1,28 @@
-<h1>Show page</h1>
+<header class="container">
+  <h1 class="text-left py-3 font-weight-bold"><%= @article.title %></h1>
+  <h2 class="text-left pb-1 subtitle"><%= @article.subtitle %></h2>
+  <i class="fas fa-share-alt-square share"></i>
+  <%# image %>
+  <p class="text-italic py-1 reporter-name"><strong><em>By <%= @article.user.email %></em></strong></p>
+  <p class="created-at"><%= @article.created_at.strftime("%e %B %Y") %></p>
+</header>
+
+<div class="container">
+  <%= simple_format(@article.content) %>
+</div>
+
+<br>
+
+<div class="container">
+  <h3 class="tags-title">Tags</h3>
+  <ul>
+    <% @article.communities.each do |community| %>
+      <li class="tag-selector"><%= community %></li>
+    <% end %>
+  </ul>
+  <ul>
+    <% @article.interests.each do |interest| %>
+      <li class="tag-selector"><%= interest %></li>
+    <% end %>
+  </ul>
+</div>

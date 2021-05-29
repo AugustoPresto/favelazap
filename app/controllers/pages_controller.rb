@@ -1,4 +1,24 @@
 class PagesController < ApplicationController
   def home
   end
+
+  def news
+    user = current_user
+    @articles = policy_scope(Article).order(created_at: :desc)
+    @user_articles = @articles.select do |article|
+      !(user.communities & article.communities).empty? && !(user.interests & article.interests).empty?
+    end
+    authorize @user_articles
+  end
+
+  def profile
+    @user = current_user
+    authorize @user 
+  end
+
+  def update
+    @user.update(user_params)
+    authorize @user 
+    redirect_to profile_path
+  end
 end
