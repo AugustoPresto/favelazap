@@ -12,3 +12,23 @@
 @import "components/index";
 @import "pages/index";
 @import "articles/index";
+
+body {
+  position: relative;
+  height: 100vh;
+  background-color: #c8d4d8;
+}
+
+#site-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: block;
+}
+
+#site-content {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
