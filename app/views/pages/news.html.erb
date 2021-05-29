@@ -1,7 +1,1 @@
-<% @user_articles.each do |article| %>
-  <p><%= article.title %></p>
-  <p><%= article.subtitle %></p>
-  <p><%= article.content %></p>
-  <p><%= article.communities %></p>
-  <p><%= article.interests %></p>
-<% end %>
+<%= render 'components/article-card' %>

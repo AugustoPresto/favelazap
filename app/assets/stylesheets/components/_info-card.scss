@@ -1,0 +1,30 @@
+.info-card{
+}
+
+.icon-card{
+  display: flex;
+  justify-content: center;
+}
+
+.description{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.title-card{
+  color: $logo-dark-green;
+  font-weight: bolder;
+  font-size: 70%;
+  font-family: sans-serif;
+}
+
+.text-card{
+  color: $logo-green;
+  font-weight: bolder;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+.button-space{
+  padding-left: 30%;
+  padding-right: 30%;
+}

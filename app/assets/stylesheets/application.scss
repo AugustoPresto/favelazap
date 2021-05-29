@@ -30,4 +30,11 @@ body {
   overflow: hidden;
   display: block;
   position: relative;
+
+a {
+  color: inherit;
+  
+  &:hover {
+    text-decoration: none;
+  }
 }

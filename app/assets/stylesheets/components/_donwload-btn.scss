@@ -1,0 +1,13 @@
+.donwload-btn {
+  background-color: $logo-dark-green;
+  color: $page-white;
+  padding: 3vw;
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.donwload-btn:hover {
+  background-color: $page-white;
+  border: 4px $logo-dark-green;
+}
