@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :set_article , only: [:edit, :update, :show, :destroy]
+  before_action :set_article, only: [:edit, :update, :show, :destroy]
+  before_action :set_user
 
   def index
     @articles = policy_scope(Article).order(created_at: :desc)
@@ -37,9 +38,8 @@ class ArticlesController < ApplicationController
   end
 
   def my_articles
-    user = current_user
     authorize(:article, :my_articles?)
-    @articles = user.articles
+    @articles = @user.articles
   end
 
   private
@@ -51,5 +51,9 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
     authorize @article
+  end
+
+  def set_user
+    @user = current_user
   end
 end
