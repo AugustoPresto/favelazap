@@ -14,8 +14,13 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <%= render 'components/flashes' %>
+    <div id="site-wrapper">
+      <div id="site-content">
+        <%# <%= render 'components/navbar' %>
+        <%= yield %>
+      </div>
+        <%# <%= render 'components/footer' %>
+    </div>
   </body>
 </html>
