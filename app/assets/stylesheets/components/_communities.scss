@@ -1,0 +1,23 @@
+.communities-list{
+  padding: 20px 0px;
+}
+.communities-list h2{
+  color: $logo-dark-green;
+  font-weight: bolder;
+  font-size: 200%;
+  font-family: 'Baloo 2', cursive;
+  padding: 5px 0px;
+}
+
+
+.communities-list li{
+  color: $page-white;
+  margin: 3px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 100%;
+  font-family: 'Baloo 2', cursive;
+  font-weight: bold;
+  padding: 4px 0px;
+  background-color: $logo-green;
+}
