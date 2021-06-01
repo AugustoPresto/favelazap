@@ -1,46 +1,36 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <div class="logo-container">
-      <%= image_tag "logo.svg" %>
-      <h1>FavelaZap</h1>
-    </div>
-  <% end %>
+<nav>
+  <% if user_signed_in? %>
+    <input type="checkbox" id="check">
+    <label for="check" class="check-avatar">
+      <%= cl_image_tag @user.avatar.key, class: "avatar-bordered" %>
+    </label>
+    <%= link_to root_path do %>
+      <label class="logo"><%= image_tag "logo-white-border.png" %><span></span></label>
+    <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", root_path, class: "nav-link" %>
-      </li>
-      <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to "Your profile", profile_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <% if current_user.avatar.key.present? %>
-            <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          <% else %>
-            <%= image_tag "generic-user.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          <% end %>
-        </li>
+    <ul id="nav-ul">
+      <li><%= link_to "Home", root_path, class: "menu-btn" %></li>
+      <% if @user.reporter %>
+        <li><%= link_to "My articles", my_articles_path, class: "menu-btn" %></li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
-        </li>
+        <li><%= link_to "Read now", news_path, class: "menu-btn" %></li>
       <% end %>
+      <li><%= link_to "Your profile", profile_path, class: "menu-btn" %></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "menu-btn" %></li>
     </ul>
-  </div>
-</div>
+  <% else %>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      Enter
+    </label>
+
+    <%= link_to root_path do %>
+      <label class="logo"><%= image_tag "logo-white-border.png" %><span><h1>FavelaZap</h1></span></label>
+    <% end %>
+
+    <ul id="nav-ul">
+      <li><%= link_to "Sign up", new_user_registration_path, class: "menu-btn" %></li>
+      <li><%= link_to "Login", new_user_session_path, class: "menu-btn" %></li>
+    </ul>
+  <% end %>
+</nav>

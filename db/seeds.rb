@@ -5,8 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'uri'
+OpenURI::Buffer.send :remove_const, 'StringMax' if OpenURI::Buffer.const_defined?('StringMax')
+OpenURI::Buffer.const_set 'StringMax', 0
+
+puts 'cleaning data base'
+Article.destroy_all
+User.destroy_all
+
 puts 'creating users...'
 users = []
+
+photo1 = URI.open('https://cdns-images.dzcdn.net/images/artist/09c8996e80653668ca912208911ddcd4/264x264.jpg')
+photo2 = URI.open('https://cdn.britannica.com/s:575x450/84/154784-004-BD0C145B.jpg')
+photo3 = URI.open('https://audio.mgtradio.net/storage/artists/bebel%20gilberto-1.jpg')
+photo4 = URI.open('https://studiosol-a.akamaihd.net/letras/215x215/fotos/3/1/4/f/314f5fc559418f77dfd4cc594176843f.jpg')
 
 user1 = User.new(
   email: Faker::Internet.email,
@@ -17,6 +30,7 @@ user1 = User.new(
   # first_name: "Felippe",
   # last_name: "Santana"
 )
+user1.avatar.attach(io: photo1, filename: 'thomas.jpg', content_type: 'image/jpg')
 user1.save!
 
 user2 = User.new(
@@ -28,6 +42,7 @@ user2 = User.new(
   # first_name: "Augusto",
   # last_name: "Souza"
 )
+user2.avatar.attach(io: photo2, filename: 'nina.jpg', content_type: 'image/jpg')
 user2.save!
 
 user3 = User.new(
@@ -39,6 +54,7 @@ user3 = User.new(
   # first_name: "Pedro",
   # last_name: "Breischiodshisdhg"
 )
+user3.avatar.attach(io: photo3, filename: 'bebel.jpg', content_type: 'image/jpg')
 user3.save!
 
 user4 = User.new(
@@ -50,6 +66,7 @@ user4 = User.new(
   # first_name: "Yuri",
   # last_name: "Gravatá"
 )
+user4.avatar.attach(io: photo4, filename: 'bernhoft.jpg', content_type: 'image/jpg')
 user4.save!
 
 users << user1
@@ -60,6 +77,11 @@ users << user4
 puts 'creating articles...'
 articles = []
 
+article_photo1 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/05/28080934/bolo-de-feijoada-1024x634.jpg')
+article_photo2 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/05/27130759/WhatsApp-Image-2021-05-27-at-09.31.49.jpeg')
+article_photo3 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/05/25112323/187095605_311024940736375_2588461337489676035_n-e1621955306895-1024x878.jpg')
+
+
 article = Article.new(
   title: "1 beadrom in Ile-de-France",
   subtitle: "37-1 Passage du Ponceau, Paris, France",
@@ -68,6 +90,7 @@ article = Article.new(
   interests: ["Sports", "Culture"]
 )
 article.user = users.sample
+article.photo.attach(io: article_photo1, filename: 'article1.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
 
@@ -79,6 +102,7 @@ article = Article.new(
   interests: ["Sports", "Finance"]
 )
 article.user = users.sample
+article.photo.attach(io: article_photo2, filename: 'article2.jpg', content_type: 'image/jpeg')
 article.save!
 articles << article
 
@@ -90,5 +114,6 @@ article = Article.new(
   interests: ["Security"]
 )
 article.user = users.sample
+article.photo.attach(io: article_photo3, filename: 'article3.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
