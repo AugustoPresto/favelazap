@@ -8,6 +8,8 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @all_communities = %w(Rocinha Vidigal Borel Formiga Macacos Barbante Rola)
+    @all_interests = %w(Sports Politics Social Security Economy)
     authorize @article
   end
 
