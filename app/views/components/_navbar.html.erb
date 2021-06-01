@@ -12,6 +12,7 @@
       <li><%= link_to "Home", root_path, class: "menu-btn" %></li>
       <% if @user.reporter %>
         <li><%= link_to "My articles", my_articles_path, class: "menu-btn" %></li>
+        <li><%= link_to "New article", new_article_path, class: "menu-btn" %></li>
       <% else %>
         <li><%= link_to "Read now", news_path, class: "menu-btn" %></li>
       <% end %>

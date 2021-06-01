@@ -27,6 +27,8 @@ gem 'pundit'
 # gems for PWA
 gem 'jquery-rails'
 gem 'serviceworker-rails'
+
+gem 'social-share-button'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

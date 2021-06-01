@@ -8,14 +8,19 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @all_communities = %w(Rocinha Vidigal Borel Formiga Macacos Barbante Rola)
+    @all_interests = %w(Sports Politics Social Security Economy)
     authorize @article
   end
 
   def create
     @article = Article.new(article_params)
+    @article.user = current_user
+    @article.communities.reject! { |e| e == "" }
+    @article.interests.reject! { |e| e == "" }
     authorize @article
     if @article.save
-      redirect_to root_path
+      redirect_to my_articles_path
     else
       render :new
     end
@@ -29,12 +34,12 @@ class ArticlesController < ApplicationController
 
   def update
     @article.update(article_params)
-    redirect_to root_path
+    redirect_to article_path(@article)
   end
 
   def destroy
     @article.destroy
-    redirect_to root_path
+    redirect_to my_articles_path
   end
 
   def my_articles
