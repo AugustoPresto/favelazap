@@ -1,32 +1,32 @@
 <nav>
   <% if user_signed_in? %>
     <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <%= cl_image_tag @user.avatar.key, class: "avatar" %>
+    <label for="check" class="check-avatar">
+      <%= cl_image_tag @user.avatar.key, class: "avatar-bordered" %>
     </label>
     <%= link_to root_path do %>
-      <label class="logo"><%= image_tag "logo.svg" %><span><h1>FavelaZap</h1></span></label>
+      <label class="logo"><%= image_tag "logo-white-border.png" %><span></span></label>
     <% end %>
-    
+
     <ul id="nav-ul">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Read now", news_path %></li>
-      <li><%= link_to "Your profile", profile_path %></li>
-      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "Home", root_path, class: "menu-btn" %></li>
+      <li><%= link_to "Read now", news_path, class: "menu-btn" %></li>
+      <li><%= link_to "Your profile", profile_path, class: "menu-btn" %></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "menu-btn" %></li>
     </ul>
   <% else %>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
-      <p class="enter">Enter</p>
+      Enter
     </label>
 
     <%= link_to root_path do %>
-      <label class="logo"><%= image_tag "logo.svg" %><span><h1>FavelaZap</h1></span></label>
+      <label class="logo"><%= image_tag "logo-white-border.png" %><span><h1>FavelaZap</h1></span></label>
     <% end %>
 
     <ul id="nav-ul">
-      <li><%= link_to "Sign up", new_user_registration_path %></li>
-      <li><%= link_to "Login", new_user_session_path %></li>
+      <li><%= link_to "Sign up", new_user_registration_path, class: "menu-btn" %></li>
+      <li><%= link_to "Login", new_user_session_path, class: "menu-btn" %></li>
     </ul>
   <% end %>
 </nav>
