@@ -1,10 +1,13 @@
 <header class="container">
   <h1 class="text-left py-3 font-weight-bold"><%= @article.title %></h1>
   <h2 class="text-left pb-1 subtitle"><%= @article.subtitle %></h2>
-  <i class="fas fa-share-alt-square share"></i>
-  <%= cl_image_tag @article.photo.key, class: "card-img-top" %>
-  <p class="text-italic py-1 reporter-name"><strong><em>By <%= @article.user.email %></em></strong></p> <%= cl_image_tag @article.user.avatar.key, class: "avatar" %>
-  <p class="created-at"><%= @article.created_at.strftime("%e %B %Y") %></p>
+  <%= social_share_button_tag(@article.title) %>
+  <%= cl_image_tag @article.photo.key, crop: :fill, gravity: :auto, class: "card-img-top" %>
+  <div class="d-flex justify-content-start align-items-end pt-3">
+    <p class="reporter-name"><strong><em>By <%= @article.user.email %></em></strong></p>
+    <%= cl_image_tag @article.user.avatar.key, class: "avatar avatar-show" %>
+  </div>
+    <p class="created-at"><%= @article.created_at.strftime("%e %B %Y") %></p>
 </header>
 
 <div class="container">

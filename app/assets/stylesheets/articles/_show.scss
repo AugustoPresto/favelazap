@@ -3,19 +3,18 @@
   font-size: 18px;
 }
 
-.share {
-  font-size: 26px;
-  color: black;
-}
-
 .reporter-name {
   font-size: 12px;
+  margin-right: 10px;
+}
+
+.avatar-show {
+  margin-top: -50px;
 }
 
 .created-at {
   font-size: 12px;
   color: #a7a7a7;
-  margin-top: -10px;
 }
 
 .tags-title {
@@ -33,7 +32,17 @@ ul {
   border-radius: 50rem;
   padding: 0.1rem 0.5rem;
   background-color: #ECEAFF;
-  color: #7E73FF;
-  border: 1px solid #7E73FF;
+  color: $logo-dark-green;
+  border: 1px solid $logo-dark-green;
   margin-right: 0.6rem;
+}
+
+$size: 20px;
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+    margin-right: 5px;
+  }
 }
