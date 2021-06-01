@@ -10,7 +10,11 @@
 
     <ul id="nav-ul">
       <li><%= link_to "Home", root_path, class: "menu-btn" %></li>
-      <li><%= link_to "Read now", news_path, class: "menu-btn" %></li>
+      <% if @user.reporter %>
+        <li><%= link_to "My articles", my_articles_path, class: "menu-btn" %></li>
+      <% else %>
+        <li><%= link_to "Read now", news_path, class: "menu-btn" %></li>
+      <% end %>
       <li><%= link_to "Your profile", profile_path, class: "menu-btn" %></li>
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "menu-btn" %></li>
     </ul>
