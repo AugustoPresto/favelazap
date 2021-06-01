@@ -15,8 +15,9 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.communities.reject!{ |e| e.to_s == "" }
-    @article.interests.reject!{ |e| e.to_s == "" }
+    @article.user = current_user
+    @article.communities.reject! { |e| e == "" }
+    @article.interests.reject! { |e| e == "" }
     authorize @article
     if @article.save
       redirect_to my_articles_path
