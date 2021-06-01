@@ -1,5 +1,5 @@
 .footer {
-  background: #F0F0F0;
+  background: $logo-dark-green;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,7 +7,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0px 50px;
+  padding: 0px 60px;
   color: rgba(0,0,0,0.3);
 }
 
@@ -16,14 +16,24 @@
   align-items: center;
 }
 .footer-links a {
-  color: rgb(1, 182, 255);
+  color: white;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
-  color: rgb(1, 95, 133);
+  color: $logo-green;
+}
+.footer-copyright {
+  color: white;
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+@media(max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
