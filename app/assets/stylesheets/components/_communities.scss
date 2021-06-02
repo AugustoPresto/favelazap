@@ -4,9 +4,10 @@
 .communities-list h2{
   color: $logo-dark-green;
   font-weight: bolder;
-  font-size: 200%;
+  font-size: 150%;
   font-family: 'Baloo 2', cursive;
   padding: 5px 0px;
+  text-align: center;
 }
 
 
@@ -20,4 +21,12 @@
   font-weight: bold;
   padding: 4px 0px;
   background-color: $logo-green;
+}
+.space-table{
+  font-size: 10%;
+}
+
+.comunity{
+  display: flex;
+  justify-content: space-around;
 }
