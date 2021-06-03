@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   resources :articles 
   get 'my_articles', to: 'articles#my_articles'
+
+  resources :facts
 end
