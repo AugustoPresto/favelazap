@@ -1,0 +1,19 @@
+.carousel .carousel-item {
+  height: 200px;
+  background-color: #777;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 200px;
+}
+
+.fact-title {
+  color: black;
+  text-shadow: 0 0 2px blanchedalmond;
+}
