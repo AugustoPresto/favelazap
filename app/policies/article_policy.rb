@@ -10,7 +10,7 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def show?
-    !user.reporter
+    true
   end
 
   def update?

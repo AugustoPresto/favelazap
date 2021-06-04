@@ -9,10 +9,6 @@ class FactPolicy < ApplicationPolicy
     user.reporter
   end
 
-  def show?
-    !user.reporter
-  end
-
   def update?
     user.reporter
   end
