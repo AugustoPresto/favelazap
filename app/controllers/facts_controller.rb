@@ -1,10 +1,6 @@
 class FactsController < ApplicationController
-  before_action :set_fact, only: [:edit, :update, :show, :destroy]
+  before_action :set_fact, only: [:edit, :update, :destroy]
   before_action :set_user
-
-  def index
-    @facts = policy_scope(Fact).order(created_at: :desc)
-  end
 
   def new
     @fact = Fact.new
@@ -24,9 +20,6 @@ class FactsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
   end
 
   def edit

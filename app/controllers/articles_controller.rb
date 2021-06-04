@@ -2,10 +2,6 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
   before_action :set_user
 
-  def index
-    @articles = policy_scope(Article).order(created_at: :desc)
-  end
-
   def new
     @article = Article.new
     @all_communities = %w(Rocinha Vidigal Borel Formiga Macacos Barbante Rola)

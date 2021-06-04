@@ -1,4 +1,4 @@
-<div class="container mt-3">
+<div class="container mt-3" id="carousel-fact">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -9,6 +9,7 @@
         <% end %>
         <div class="carousel-caption d-md-block">
           <h5 class="fact-title"><strong><%= @facts.first.title %></strong></h5>
+          <p class="fact-time">Added 20 minutes ago</p>
         </div>
       </div>
       <% @facts.drop(1).each do |fact| %>
@@ -20,6 +21,7 @@
         <% end %>
           <div class="carousel-caption d-md-block">
             <h5 class="fact-title"><strong><%= fact.title %></strong></h5>
+            <p class="fact-time">Added 1 hour ago</p>
           </div>
         </div>
       <% end %>
