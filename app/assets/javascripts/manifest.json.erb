@@ -1,19 +1,15 @@
 <% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
 {
   "name": "FavelaZap",
-  "short_name": "FavelaZap",
+  "short_name": "FavZap",
+  "icons": [{
+    "src": "assets/place_holder.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }],
   "start_url": "/",
-  "icons": [
-  <% icon_sizes.map { |s| "#{s}x#{s}" }.each.with_index do |dim, i| %>
-    {
-      "src": "<%= image_path "serviceworker-rails/heart-#{dim}.png" %>",
-      "sizes": "<%= dim %>",
-      "type": "image/png"
-    }<%= i == (icon_sizes.length - 1) ? '' : ',' %>
-  <% end %>
-  ],
-  "theme_color": "#000000",
-  "background_color": "#FFFFFF",
+  "theme_color": "#1E481B",
+  "background_color": "#32BD46",
   "display": "fullscreen",
   "orientation": "portrait"
 }
