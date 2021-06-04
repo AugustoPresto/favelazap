@@ -1,0 +1,7 @@
+<%= simple_form_for fact do |f| %>
+  <%= f.input :title %>
+  <%= f.input :communities, collection: @all_communities, input_html: { multiple: true } %>
+  <%= f.input :interests, collection: @all_interests, input_html: { multiple: true } %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: "donwload-btn btn-block mb-3" %>
+<% end %>

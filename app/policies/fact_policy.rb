@@ -1,16 +1,12 @@
-class ArticlePolicy < ApplicationPolicy
+class FactPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
-
+  
   def create?
     user.reporter
-  end
-
-  def show?
-    true
   end
 
   def update?
@@ -18,10 +14,6 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.reporter
-  end
-
-  def my_articles?
     user.reporter
   end
 
