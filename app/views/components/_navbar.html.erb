@@ -2,22 +2,26 @@
   <% if user_signed_in? %>
     <input type="checkbox" id="check">
     <label for="check" class="check-avatar">
-      <%= cl_image_tag @user.avatar.key, class: "avatar-bordered" %>
+      <% if @user.avatar.present? %>
+        <%= cl_image_tag @user.avatar.key, class: "avatar-bordered" %>
+      <% else %>
+        <%= image_tag "generic-user.jpg", class: "avatar-bordered" %>
+      <% end %>
     </label>
     <%= link_to root_path do %>
       <label class="logo"><%= image_tag "logo-white-border.png" %><span></span></label>
     <% end %>
-
     <ul id="nav-ul">
       <li><%= link_to "Home", root_path, class: "menu-btn" %></li>
       <% if @user.reporter %>
-        <li><%= link_to "My articles", my_articles_path, class: "menu-btn" %></li>
         <li><%= link_to "New article", new_article_path, class: "menu-btn" %></li>
         <li><%= link_to "New fact", new_fact_path, class: "menu-btn" %></li>
+        <li><%= link_to "My articles", my_articles_path, class: "menu-btn" %></li>
+        <li><%= link_to "My facts", my_facts_path, class: "menu-btn" %></li>
       <% else %>
         <li><%= link_to "Read now", news_path, class: "menu-btn" %></li>
       <% end %>
-      <li><%= link_to "Your profile", profile_path, class: "menu-btn" %></li>
+      <li><%= link_to "My profile", profile_path, class: "menu-btn" %></li>
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "menu-btn" %></li>
     </ul>
   <% else %>

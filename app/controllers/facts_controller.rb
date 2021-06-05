@@ -4,8 +4,6 @@ class FactsController < ApplicationController
 
   def new
     @fact = Fact.new
-    @all_communities = %w(Rocinha Vidigal Borel Formiga Macacos Barbante Rola)
-    @all_interests = %w(Sports Politics Social Security Economy)
     authorize @fact
   end
 
@@ -16,7 +14,7 @@ class FactsController < ApplicationController
     @fact.interests.reject! { |e| e == "" }
     authorize @fact
     if @fact.save
-      redirect_to fact_path(@fact)
+      redirect_to my_facts_path
     else
       render :new
     end
@@ -27,13 +25,19 @@ class FactsController < ApplicationController
 
   def update
     @fact.update(fact_params)
-    redirect_to fact_path(@fact)
+    redirect_to my_facts_path
   end
 
   def destroy
     @fact.destroy
     redirect_to my_facts_path
   end
+
+  def my_facts
+    authorize(:fact, :my_facts?)
+    @facts = @user.facts.order(created_at: :desc)
+  end
+
 
   private
 
