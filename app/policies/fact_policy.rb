@@ -17,6 +17,10 @@ class FactPolicy < ApplicationPolicy
     user.reporter
   end
 
+  def my_facts?
+    user.reporter
+  end
+
   def news?
     !user.reporter
   end

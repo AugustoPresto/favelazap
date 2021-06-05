@@ -4,8 +4,6 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-    @all_communities = %w(Rocinha Vidigal Borel Formiga Macacos Barbante Rola)
-    @all_interests = %w(Sports Culture Politics Social Security Economy)
     authorize @article
   end
 
@@ -40,7 +38,7 @@ class ArticlesController < ApplicationController
 
   def my_articles
     authorize(:article, :my_articles?)
-    @articles = @user.articles
+    @articles = @user.articles.order(created_at: :desc)
   end
 
   private
