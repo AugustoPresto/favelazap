@@ -49,7 +49,7 @@ user3 = User.new(
   email: Faker::Internet.email,
   password: "abc123",
   reporter: "false",
-  communities: ["Antares", "Barbante", "Rola"],
+  communities: ["Barbante", "Rola"],
   interests: ["Security"]
   # first_name: "Pedro",
   # last_name: "Breischiodshisdhg"
@@ -61,7 +61,7 @@ user4 = User.new(
   email: Faker::Internet.email,
   password: "abc123",
   reporter: "false",
-  communities: ["Antares", "Barbante", "Rola"],
+  communities: ["Barbante", "Rola"],
   interests: ["Security"]
   # first_name: "Yuri",
   # last_name: "Gravatá"
@@ -110,7 +110,7 @@ article = Article.new(
   title: "Penthouse in Copacabana",
   subtitle: "Rodolfo Dantas 85, Rio de Janeiro, Brazil",
   content: "Modern and spacious 2 bedroom penthouse ideally located in Copacabana. This penthouse provides the perfect private retreat in which to relax yourself: stylish interior design, bright rooms and a large terrace with a swimming-pool.",
-  communities: ["Antares", "Barbante", "Rola"],
+  communities: ["Barbante", "Rola"],
   interests: ["Security"]
 )
 article.user = users.sample
