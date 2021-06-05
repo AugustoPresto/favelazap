@@ -18,6 +18,9 @@ module Favelazap
 
     # Configuration for the application, engines, and railties goes here.
     #
+    config.assets.configure do |env|
+      env.export_concurrent = false
+    end
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
