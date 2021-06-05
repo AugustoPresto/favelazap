@@ -9,6 +9,10 @@ class PagesController < ApplicationController
     @articles = all_articles.select do |article|
       !(@user.communities & article.communities).empty? && !(@user.interests & article.interests).empty?
     end
+    all_facts = policy_scope(Fact).order(created_at: :desc)
+    @facts = all_facts.select do |fact|
+      !(@user.communities & fact.communities).empty? && !(@user.interests & fact.interests).empty?
+    end
     # authorize @articles
   end
 

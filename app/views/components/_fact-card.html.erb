@@ -1,0 +1,38 @@
+<div class="container mt-3" id="carousel-fact">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <% if @facts.first.photo.key.present? %>
+          <%= cl_image_tag @facts.first.photo.key, class: "w-100" %>
+        <% else %>
+          <%= image_tag "logo-grey.jpg", class: "w-100" %>
+        <% end %>
+        <div class="carousel-caption d-md-block">
+          <h5 class="fact-title"><strong><%= @facts.first.title %></strong></h5>
+          <p class="fact-time">Added 20 minutes ago</p>
+        </div>
+      </div>
+      <% @facts.drop(1).each do |fact| %>
+        <div class="carousel-item">
+        <% if fact.photo.key.present? %>
+          <%= cl_image_tag @facts.photo.key, class: "w-100" %>
+        <% else %>
+          <%= image_tag "logo-grey.jpg", class: "w-100" %>
+        <% end %>
+          <div class="carousel-caption d-md-block">
+            <h5 class="fact-title"><strong><%= fact.title %></strong></h5>
+            <p class="fact-time">Added 1 hour ago</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
