@@ -38,7 +38,6 @@ class FactsController < ApplicationController
     @facts = @user.facts.order(created_at: :desc)
   end
 
-
   private
 
   def fact_params
