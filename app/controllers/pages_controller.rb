@@ -18,7 +18,7 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
-    authorize @user 
+    authorize @user
   end
 
   def update
