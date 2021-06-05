@@ -38,7 +38,7 @@ user2 = User.new(
   password: "abc123",
   reporter: "false",
   communities: ["Borel", "Macacos"],
-  interests: ["Sports", "Finance"]
+  interests: ["Sports", "Economy"]
   # first_name: "Augusto",
   # last_name: "Souza"
 )
@@ -99,7 +99,7 @@ article = Article.new(
   subtitle: "Av. Vieira Souto, 366, Ipanema, Rio de Janeiro, Brazil",
   content: "Big apartment with panoramic view for the best urban beach in ther world. Come to have an unique experince",
   communities: ["Borel", "Macacos"],
-  interests: ["Sports", "Finance"]
+  interests: ["Sports", "Economy"]
 )
 article.user = users.sample
 article.photo.attach(io: article_photo2, filename: 'article2.jpg', content_type: 'image/jpeg')
