@@ -13,8 +13,8 @@ class PagesController < ApplicationController
     @facts = all_facts.select do |fact|
       !(@user.communities & fact.communities).empty? && !(@user.interests & fact.interests).empty?
     end
-    @articles.order(created_at: :desc)
-    @facts.order(created_at: :desc)
+    #@articles.order(created_at: :desc)
+    #@facts.order(created_at: :desc)
     # authorize @articles
   end
 
