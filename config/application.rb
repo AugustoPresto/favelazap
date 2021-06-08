@@ -16,6 +16,9 @@ module Favelazap
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    config.assets.configure do |env|
+        env.export_concurrent = false
+    end
     # Configuration for the application, engines, and railties goes here.
     #
     config.assets.configure do |env|
