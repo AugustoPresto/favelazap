@@ -1,10 +1,13 @@
 class CommentsController < ApplicationController
-  def index
-    @comments = Comment.all
-  end
-
-  def show
-    @comment = Comment.find(params[:id])
+  def create
+    @article = Article.find(params[:article_id])
+    @comment = Comment.new(comment_params)
+    @comment.article = @article
+    if @comment.save
+      redirect_to article_path(@article)
+    else
+      render 'articles/show'
+    end
   end
 
   private

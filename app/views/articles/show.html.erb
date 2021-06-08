@@ -29,3 +29,17 @@
     <% end %>
   </ul>
 </div>
+
+<div class="container">
+  <%= pluralize @article.comments.size, "comments" %>
+  <div id="reviews">
+    <% if @article.comments.blank? %>
+      <p>Be the first to leave a comment</p>
+    <% else %>
+      <% @article.comments.each do |comment| %>
+        <p><%= comment.content %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <%= render 'components/comment-form' %>
+</div>

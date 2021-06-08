@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile'
 
   resources :articles, except: [:index] do
-    resources :comments
+    resources :comments, only: :create
   end
   get 'my_articles', to: 'articles#my_articles'
   
