@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :articles
   has_many :facts
+  has_many :comments
   has_one_attached :avatar
 
   COMMUNITIES = %w(Rocinha Vidigal Borel Formiga Macacos Barbante Rola)
