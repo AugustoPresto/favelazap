@@ -23,6 +23,18 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+//= require serviceworker-companion
+
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('/serviceworker.js')
+    .then(function (reg) {
+      console.log('Service worker change, registered the service worker');
+    });
+}
+// Otherwise, no push notifications :(
+else {
+  console.error('Service worker is not supported in this browser');
+}
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
