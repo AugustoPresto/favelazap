@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment.article = @article
     authorize @comment
     if @comment.save
-      redirect_to article_path(@article)
+      redirect_to article_path(@article, anchor: "comment-#{@comment.id}")
     else
       render 'articles/show'
     end
