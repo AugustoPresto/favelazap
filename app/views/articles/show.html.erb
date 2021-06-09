@@ -16,7 +16,7 @@
 
 <br>
 
-<div class="container">
+<div class="container mb-3">
   <h3 class="tags-title">Tags</h3>
   <ul>
     <% @article.communities.each do |community| %>
@@ -34,13 +34,26 @@
   <%= pluralize @article.comments.size, "comments" %>
   <div>
     <% if @article.comments.blank? %>
-      <p>Be the first to leave a comment</p>
+      <p class="comment-content">Be the first to leave a comment!</p>
     <% else %>
       <% @article.comments.each do |comment| %>
-        <p id="comment-<%= comment.id %>"><%= comment.content %></p>
-        <p>by <%= comment.user.email %></p>
+        <p class="comment-content" id="comment-<%= comment.id %>"><%= comment.content %></p>
+        <p class="comment-user"><em>By <%= comment.user.email %></em></p>
       <% end %>
     <% end %>
   </div>
   <%= render 'components/comment-form' %>
 </div>
+
+<style>
+  .comment-content {
+    font-size: 13px;
+    margin: 12px 0 0 0;
+  }
+
+  .comment-user {
+    font-size: 13px;
+    margin: 0 0 12px 0;
+    color: #a7a7a7;
+  }
+</style>
