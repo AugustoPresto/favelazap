@@ -11,6 +11,12 @@
           <div class="carousel-caption d-md-block">
             <h5 class="fact-title"><strong><%= @facts.first.title %></strong></h5>
             <p class="fact-time">Added 20 minutes ago</p>
+            <% if @user == @facts.first.user %>
+                <div class="icons">
+                  <div class="delete-icon"><i class="fas fa-trash"></i></div>
+                  <div class="edit-icon"><i class="fas fa-edit"></i></div>
+                </div>
+            <% end %>
           </div>
         </div>
         <% @facts.drop(1).each do |fact| %>
@@ -23,6 +29,12 @@
             <div class="carousel-caption d-md-block">
               <h5 class="fact-title"><strong><%= fact.title %></strong></h5>
               <p class="fact-time">Added 1 hour ago</p>
+              <% if @user == fact.user %>
+                <div class="icons">
+                  <div class="delete-icon"><i class="fas fa-trash"></i></div>
+                  <div class="edit-icon"><i class="fas fa-edit"></i></div>
+                </div>
+              <% end %>
             </div>
           </div>
         <% end %>
