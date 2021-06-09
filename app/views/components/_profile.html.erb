@@ -1,13 +1,19 @@
-<h3>Your Profile</h3>
-<p><%= cl_image_tag @user.avatar.key, class: "avatar-bordered" %></p>
-<p><%= @user.email %></p>
-<h4>Your Communities</h4>
-<% @user.communities.each do |communities| %>
-<p><ul><%= communities.to_s %></ul></p>
-<% end %>
-<h4>Your Interests</h4>
-<% @user.interests.each do |interests| %>
-<p><ul><%= interests.to_s %></ul></p>
-<% end %>
-
+<h3 class="text-center">Your Profile</h3>
+<hr>
+<p><%= cl_image_tag @user.avatar.key, class: "avatar-bordered" %><%= @user.email %></p>
+<hr>
+<div class="container">
+  <h3 class="tags-title">Tags</h3>
+  <ul>
+    <% @user.communities.each do |community| %>
+      <li class="tag-selector"><%= community %></li>
+    <% end %>
+  </ul>
+  <ul>
+    <% @user.interests.each do |interest| %>
+      <li class="tag-selector"><%= interest %></li>
+    <% end %>
+  </ul>
+</div>
+<hr>
 <%= link_to "Edit your profile.", edit_user_registration_path, class: "btn btn-success"%>

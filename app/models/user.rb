@@ -8,8 +8,8 @@ class User < ApplicationRecord
   has_many :facts
   has_one_attached :avatar
 
-  COMMUNITIES = %w(Rocinha Vidigal Borel Formiga Macacos Barbante Rola)
-  INTERESTS = %w(Sports Culture Politics Social Security Economy)
+  COMMUNITIES = %w(Rocinha Vidigal Borel Formiga Macacos Juramento)
+  INTERESTS = %w(Sports Culture Health Social Security Economy)
 
   validates :communities, inclusion: { in: COMMUNITIES }  
   validates :interests, inclusion: { in: INTERESTS }  
