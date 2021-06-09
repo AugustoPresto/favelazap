@@ -1,6 +1,11 @@
+.container {
+  color: $logo-dark-green;
+}
+
 .subtitle {
-  color: #a7a7a7;
+  color: $logo-green;
   font-size: 18px;
+  font-weight: bolder;
 }
 
 .reporter-name {
@@ -14,7 +19,7 @@
 
 .created-at {
   font-size: 12px;
-  color: #a7a7a7;
+  color: $logo-green;
 }
 
 .tags-title {
@@ -33,7 +38,7 @@ ul {
   padding: 0.1rem 0.5rem;
   background-color: #ECEAFF;
   color: $logo-dark-green;
-  border: 1px solid $logo-dark-green;
+  border: 1px solid $logo-green;
   margin-right: 0.6rem;
 }
 
@@ -49,4 +54,10 @@ $size: 20px;
     width: $size;
     margin-right: 5px;
   }
+}
+
+.card-img-top {
+  border-color: $logo-green;
+  border-radius: 5px;
+  border-style: double;
 }
