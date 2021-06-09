@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
-  before_action :set_user
 
   def new
     @article = Article.new
@@ -21,6 +20,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
   end
 
   def edit
@@ -38,7 +38,7 @@ class ArticlesController < ApplicationController
 
   def my_articles
     authorize(:article, :my_articles?)
-    @articles = @user.articles.order(created_at: :desc)
+    @articles = current_user.articles.order(created_at: :desc)
   end
 
   private
@@ -50,9 +50,5 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
     authorize @article
-  end
-
-  def set_user
-    @user = current_user
   end
 end

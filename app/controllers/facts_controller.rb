@@ -1,6 +1,5 @@
 class FactsController < ApplicationController
   before_action :set_fact, only: [:edit, :update, :destroy]
-  before_action :set_user
 
   def new
     @fact = Fact.new
@@ -35,7 +34,7 @@ class FactsController < ApplicationController
 
   def my_facts
     authorize(:fact, :my_facts?)
-    @facts = @user.facts.order(created_at: :desc)
+    @facts = current_user.facts.order(created_at: :desc)
   end
 
   private
@@ -47,9 +46,5 @@ class FactsController < ApplicationController
   def set_fact
     @fact = Fact.find(params[:id])
     authorize @fact
-  end
-
-  def set_user
-    @user = current_user
   end
 end

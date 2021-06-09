@@ -1,0 +1,4 @@
+<%= simple_form_for([ @article, @comment ], remote: true) do |f| %>
+  <%= f.input :content, label: 'Leave a comment', as: :text, :input_html => {:rows => 3} %>
+  <%= f.button :submit, class: "donwload-btn mb-3" %>
+<% end %>
