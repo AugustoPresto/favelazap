@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'news', to: 'pages#news'
   get 'profile', to: 'pages#profile'
+  get 'my_news', to: 'pages#my_news'
 
   resources :articles, except: [:index]
   get 'my_articles', to: 'articles#my_articles'

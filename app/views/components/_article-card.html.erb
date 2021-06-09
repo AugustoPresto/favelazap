@@ -11,6 +11,12 @@
             <p class="created-at-card d-flex justify-content-end"><%= article.created_at.strftime("%e %B %Y") %></p>
           </div>
         <% end %>
+        <% if @user == article.user %>
+          <div class="icons">
+            <div class="delete-icon"><i class="fas fa-trash"></i></div>
+            <div class="edit-icon"><i class="fas fa-edit"></i></div>
+          </div>
+        <% end %>
       </div>
     <% end %>  
   </div>

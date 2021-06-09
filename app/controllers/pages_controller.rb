@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :set_user, only: [ :news, :profile, :my_articles]
+
   def home
     @user = current_user if user_signed_in?
   end
@@ -26,4 +28,19 @@ class PagesController < ApplicationController
     authorize @user 
     redirect_to profile_path
   end
+
+  def my_news
+    @user = current_user
+    authorize(:article, :my_articles?)
+    @articles = @user.articles.order(created_at: :desc)
+    authorize(:fact, :my_facts?)
+    @facts = @user.facts.order(created_at: :desc)
+  end
+
+  private
+
+  def set_user
+    @user = current_user
+  end
+
 end
