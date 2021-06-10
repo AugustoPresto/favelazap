@@ -1,44 +1,44 @@
-#carousel-fact {
-  .carousel .carousel-item {
-    height: 175px;
-    background-color: #777;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .carousel-item img {
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    min-height: 200px;
-  }
-  
-  .fact-title {
-    color: black;
-    text-shadow: 0 0 2px blanchedalmond;
-  }
-  
-  .fact-time {
-    font-size: 12px;
-    color: #bbbbbb;
-  }
-  .icons{
-    text-align: center;
-    position: absolute;
-    left: 41%;    
-  }
+.card-red {
+  background-color: #f3e3e3;
+  box-shadow: 2px 2px white, 4px 4px #e07c7c, 6px 6px $logo-red;
+  border-radius: 5px;
+}
 
-  .delete-icon{
-    margin-right: 6px;
-  }
+.card-red:hover{
+  background-color: #f3e3e3;
+  box-shadow: 2px 2px white, 4px 4px #e07c7c, 6px 6px $logo-red, 8px 8px black;
+}
 
-  .carousel-inner {
-    box-shadow: 2px 2px white, 4px 4px #e27878, 6px 6px $logo-red;
-    border: double;
-    border-radius: 5px;
-    color: #BD3232;
-    margin-bottom: 10px;
-  }
+.red {
+  border-color: $logo-red;
+  border-radius: 5px;
+  border-style: double;
+  height: 125px;
+}
+
+.card-body-red{
+  position: relative;
+  margin-left: 10px;
+  color: $logo-red;  
+  margin-bottom: 7px;
+}
+
+.delete-icon-red{
+  color: $logo-red;
+}
+
+.edit-icon-red{
+  color: $logo-red;
+}
+
+.delete-icon-red :hover{
+  color: #d67878;
+}
+
+.edit-icon-red :hover{
+  color: #d67878;
+}
+
+.icons {
+  margin-bottom: 3px;
 }

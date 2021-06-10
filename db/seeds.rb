@@ -203,7 +203,7 @@ fact_photo1 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/
 fact_photo2 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/06/08204152/atualizaodocovidnasfavelas-08-06-2021.png')
 
 fact = Fact.new(
-  title: "A bala tá comendo.",
+  title: "Polícia continua com operações, mesmo com suspensão do STF.",
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
@@ -213,7 +213,7 @@ fact.save!
 facts << fact
 
 fact = Fact.new(
-  title: "Morreu geral.",
+  title: "Favelas registram 2 novos casos de Covid-19 em 24h.",
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
