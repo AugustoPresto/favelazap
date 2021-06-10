@@ -83,6 +83,10 @@ article_photo3 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.c
 article_photo4 = URI.open('http://43.mostra.org/_img/_filmes/186.jpg')
 article_photo5 = URI.open('https://www.vozdascomunidades.com.br/wp-content/uploads/2020/06/rafael-oliveira.jpeg')
 article_photo6 = URI.open('https://www.hojeemdia.com.br/polopoly_fs/1.449419.1488398402!/image/image.jpg_gen/derivatives/landscape_653/image.jpg')
+article_photo7 = URI.open('https://veja.abril.com.br/wp-content/uploads/2018/08/vista-aecc81rea-de-paraisocc81polis-na-vila-andrade-ao-lado-do-bairro-do-morumbi.jpg?quality=70&strip=info&resize=680,453')
+article_photo8 = URI.open('https://veja.abril.com.br/wp-content/uploads/2021/06/DOM-08.jpg.jpg?quality=70&strip=info&resize=680,453')
+article_photo9 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/06/04140528/E3DLTFoXIAEGA65.jpeg')
+
 article = Article.new(
   title: "Projeto Social do Borel reinicia atividades.",
   subtitle: "Neste novo ciclo, policiais da UPP no Borel irão realizar atividades culturais.",
@@ -152,5 +156,41 @@ article = Article.new(
 )
 article.user = users.sample
 article.photo.attach(io: article_photo6, filename: 'article6.jpg', content_type: 'image/jpg')
+article.save!
+articles << article
+
+article = Article.new(
+  title: "Cufa lança ‘Ajudar Tá No Sangue’.",
+  subtitle: "Mobilização quer atingir cinco mil favelas de todo o país.",
+  content: "A Central Única das Favelas (Cufa) lança nesta segunda-feira uma campanha nacional de doação de sangue. A ideia é, segundo os organizadores, mostrar para a sociedade o potencial solidário da favela.",
+  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
+  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+)
+article.user = users.sample
+article.photo.attach(io: article_photo7, filename: 'article7.jpg', content_type: 'image/jpg')
+article.save!
+articles << article
+
+article = Article.new(
+  title: "‘Dom’, no Amazon Prime, playboy que virou bandido.",
+  subtitle: "Caso real de um jovem carioca de classe média é recontado na grande aposta nacional de streaming.",
+  content: "Bem-vestido, olhos azuis, carro de luxo e com uma loira estonteante a tiracolo, Pedro Dom é um rapaz acima de qualquer suspeita aos olhos dos seguranças e porteiros da abastada Zona Sul carioca.Munido de informações privilegiadas sobre moradores ausentes, ele entra pela porta da frente em mansões e apartamentos luxuosos, onde seu “bonde”, escondido no veículo, faz a limpa levando joias, dólares e até uma coleirinha de cachorro cravejada de brilhantes.",
+  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
+  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+)
+article.user = users.sample
+article.photo.attach(io: article_photo8, filename: 'article8.jpg', content_type: 'image/jpg')
+article.save!
+articles << article
+
+article = Article.new(
+  title: "Iza exalta a periferia em ‘Gueto’, clipe gravado na Igreja da Penha.",
+  subtitle: "Mãe da cantora sobe de joelhos a Basílica em cena emocionante.",
+  content: "Cria de Olaria, Zona Norte do Rio, a cantora e compositora Iza está de volta! Lançado hoje (04) com uma videografia impecável, tendo como cenário da Igreja da Penha, o clip ‘Gueto’ faz parte do seu próximo álbum que destaca o subúrbio carioca e tem previsão de estreia para o 2º semestre. A identidade de Iza marca o hit, que conta com cenas gravadas no bairro onde a cantora cresceu. Além da coreografia marcante, cores vibrantes e participação de ritmistas da escola de samba Imperatriz Leopoldinense, a cena em que Isabel Cristina Lima, mãe da cantora, sobe a escadaria da Basílica Santuário de Nossa Senhora da Penha de França, é um dos destaques do filme. A composição de “Gueto” é de IZA, Pablo Bispo, Ruxell e Sérgio Santos, que também produziram o clip, que foi gravado, mixado e masterizado no Pancadão Estúdio.",
+  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
+  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+)
+article.user = users.sample
+article.photo.attach(io: article_photo9, filename: 'article9.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
