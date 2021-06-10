@@ -19,7 +19,7 @@
             <% end %>
           </div>
         </div>
-        <% @facts.drop(1).each do |fact| %>
+        <% @facts.drop(10).each do |fact| %>
           <div class="carousel-item">
           <% if fact.photo.key.present? %>
             <%= cl_image_tag @facts.photo.key, class: "w-100" %>

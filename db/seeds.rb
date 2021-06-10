@@ -12,6 +12,7 @@ OpenURI::Buffer.const_set 'StringMax', 0
 puts 'cleaning data base'
 Article.destroy_all
 User.destroy_all
+Fact.destroy_all
 
 puts 'creating users...'
 users = []
@@ -194,3 +195,29 @@ article.user = users.sample
 article.photo.attach(io: article_photo9, filename: 'article9.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
+
+puts 'creating facts...'
+facts = []
+
+fact_photo1 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/05/06105341/WhatsApp-Image-2021-05-06-at-10.50.03.jpeg')
+fact_photo2 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/06/08204152/atualizaodocovidnasfavelas-08-06-2021.png')
+
+fact = Fact.new(
+  title: "A bala tá comendo.",
+  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
+  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+)
+fact.user = users.sample
+fact.photo.attach(io: fact_photo1, filename: 'fact1.jpg', content_type: 'image/jpg')
+fact.save!
+facts << fact
+
+fact = Fact.new(
+  title: "Morreu geral.",
+  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
+  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+)
+fact.user = users.sample
+fact.photo.attach(io: fact_photo2, filename: 'fact2.jpg', content_type: 'image/jpg')
+fact.save!
+facts << fact
