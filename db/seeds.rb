@@ -50,7 +50,7 @@ user3 = User.new(
   password: "abc123",
   reporter: "false",
   communities: ["Juramento", "Macacos"],
-  interests: ["Security"]
+  interests: ["Sports", "Economy"]
   # first_name: "Pedro",
   # last_name: "Breischiodshisdhg"
 )
@@ -80,14 +80,15 @@ articles = []
 article_photo1 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/06/07180704/2021-0706-projeto-atitude-social-faz-parceria-com-upp-depois-de-um-ano-fechada-VILMA-RIBEIRO-30-1536x1024.jpg')
 article_photo2 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/06/01101758/2021-05-08-FAVELA-TENIS-SELMA-SOUZA-5-1536x1025.jpg')
 article_photo3 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/05/19171606/188084263_4318836324828381_3177745573479970469_n-e1621457117903.jpg')
-
-
+article_photo4 = URI.open('http://43.mostra.org/_img/_filmes/186.jpg')
+article_photo5 = URI.open('https://www.vozdascomunidades.com.br/wp-content/uploads/2020/06/rafael-oliveira.jpeg')
+article_photo6 = URI.open('https://www.hojeemdia.com.br/polopoly_fs/1.449419.1488398402!/image/image.jpg_gen/derivatives/landscape_653/image.jpg')
 article = Article.new(
   title: "Projeto Social do Borel reinicia atividades.",
   subtitle: "Neste novo ciclo, policiais da UPP no Borel irão realizar atividades culturais.",
   content: "Após 5 anos sem qualquer convênio para auxiliar a continuidade das atividades, o projeto Atitude Social finalmente encontrou um parceiro para continuar com os trabalhos na comunidade do Borel: a UPP da comunidade. Os policiais da unidade de polícia da favela estarão atuando como professores dos projetos sociais, depois de mais de um ano sem atividades socioeducativas no espaço.",
   communities: ["Borel", "Formiga"],
-  interests: ["Social", "Culture"]
+  interests: ["Sports", "Economy"]
 )
 article.user = users.sample
 article.photo.attach(io: article_photo1, filename: 'article1.jpg', content_type: 'image/jpg')
@@ -115,5 +116,41 @@ article = Article.new(
 )
 article.user = users.sample
 article.photo.attach(io: article_photo3, filename: 'article3.jpg', content_type: 'image/jpg')
+article.save!
+articles << article
+
+article = Article.new(
+  title: "Atleta da Rocinha cria vaquinha para jogar em Portugal",
+  subtitle: "Os testes estão marcados para o mês de setembro e a vaquinha busca arrecadar 20 mil reais",
+  content: "Que menino nunca sonhou em ser jogador de futebol profissional? E quando se é cria de favela se intensifica ainda mais, porque a chance de viver esse sonho e poder modificar sua vida e a da família acaba sendo uma motivação extra. O zagueiro do time amador de Fut 7, Quase Nada F.C., Matheus Nattan dos Santos, de 19 anos, morador da Nova Brasília no Complexo do Alemão, é um dos tantos que estão correndo atrás desse sonho. Há um ano jogando pelo time, Matheus recebeu no dia 10 de junho a chance de fazer avaliações por uma semana na cidade de Chaves, no distrito de Vila Real, norte de Portugal, e poder tentar a carreira profissional no futebol português. Contudo, os custos da viagem são altos, e o atleta decidiu criar uma vaquinha online para ter condições de viajar. Você pode contribuir clicando aqui.",
+  communities: ["Rocinha", "Vidigal"],
+  interests: ["Health", "Security"]
+)
+article.user = users.sample
+article.photo.attach(io: article_photo4, filename: 'article4.jpg', content_type: 'image/jpg')
+article.save!
+articles << article
+
+article = Article.new(
+  title: "Jovem de 23 anos cria projeto social ‘Favela Vertical’.",
+  subtitle: "Rafael Capivara leva cultura, educação e assistência à comunidade",
+  content: "Rafael conta que o coletivo surgiu em agosto de 2019, junto com a construção da sua formação como produtor pela ESPM e Museu de Arte do Rio. “Sempre entendi que minha favela precisava de um espaço plural, múltiplo de ideias e que repensasse como o nosso território pode se desenvolver. Entendendo desde o começo, como e o por que estávamos paralisados no desenvolvimento comunitário em comparação à outras comunidades por causa da força política imposta para nós desde o surgimento da comunidade, tentei produzir um organismo que pudesse ultrapassar e viver em conjunto a isso. E foi pensando nisso que pensei num espaço de cursos, oficinas e construção que fornecesse educação comunitária, cultura de território e geração de renda.”",
+  communities: ["Borel", "Formiga"],
+  interests: ["Sports", "Economy"]
+)
+article.user = users.sample
+article.photo.attach(io: article_photo5, filename: 'article5.jpg', content_type: 'image/jpg')
+article.save!
+articles << article
+
+article = Article.new(
+  title: "Incêndio atinge Morro do Juramento.",
+  subtitle: "O Corpo de Bombeiros do Rio foi acionado para uma ocorrência de incêndio em Vicente de Carvalho",
+  content: "Duas viaturas do Quartel de Ramos já foram enviadas ao local. O atendimento na área, no entanto, é considerado difícil. Ainda não há maiores informações sobre a causa e o impacto do incêndio.",
+  communities: ["Juramento", "Macacos"],
+  interests: ["Sports", "Economy"]
+)
+article.user = users.sample
+article.photo.attach(io: article_photo6, filename: 'article6.jpg', content_type: 'image/jpg')
 article.save!
 articles << article

@@ -31,3 +31,15 @@
 .edit-icon :hover{
   color: $logo-green;
 }
+
+.card {
+  background-color: #e7fdea;
+  box-shadow: 2px 2px white, 4px 4px $logo-green, 6px 6px $logo-dark-green;
+}
+
+.card:hover{
+  background-color: #e7fdea;
+  box-shadow: 2px 2px white, 4px 4px $logo-green, 6px 6px $logo-dark-green, 8px 8px black;
+}
+
+
