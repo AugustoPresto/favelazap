@@ -1,6 +1,6 @@
 #carousel-fact {
   .carousel .carousel-item {
-    height: 200px;
+    height: 175px;
     background-color: #777;
     border-radius: 5px;
     overflow: hidden;
@@ -34,4 +34,11 @@
     margin-right: 6px;
   }
 
+  .carousel-inner {
+    box-shadow: 2px 2px white, 4px 4px #e27878, 6px 6px $logo-red;
+    border: double;
+    border-radius: 5px;
+    color: #BD3232;
+    margin-bottom: 10px;
+  }
 }
