@@ -9,8 +9,6 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user = current_user
-    @article.communities.reject! { |e| e == "" }
-    @article.interests.reject! { |e| e == "" }
     authorize @article
     if @article.save
       redirect_to news_path
@@ -34,12 +32,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to my_articles_path
-  end
-
-  def my_articles
-    authorize(:article, :my_articles?)
-    @articles = current_user.articles.order(created_at: :desc)
+    redirect_to my_news_path
   end
 
   def likes

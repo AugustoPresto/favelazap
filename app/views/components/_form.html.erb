@@ -2,8 +2,8 @@
   <%= f.input :title %>
   <%= f.input :subtitle %>
   <%= f.input :content, :input_html => {:rows => 10} %>
-  <%= f.input :communities, as: :check_boxes, collection: User::COMMUNITIES, input_html: { multiple: true } %>
-  <%= f.input :interests, as: :check_boxes, collection: User::INTERESTS, input_html: { multiple: true } %>
+  <%= f.input :communities, as: :check_boxes, collection: User::COMMUNITIES, include_hidden: false, input_html: { multiple: true } %>
+  <%= f.input :interests, as: :check_boxes, collection: User::INTERESTS, include_hidden: false, input_html: { multiple: true } %>
   <%= f.input :photo, as: :file %>
   <%= f.button :submit, class: "donwload-btn btn-block mb-3" %>
 <% end %>
