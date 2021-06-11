@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :articles, except: [:index] do
     resources :comments, only: :create
   end
+  get  'articles/:id/likes', to: 'articles#likes', as: "likes"
+
   get 'my_articles', to: 'articles#my_articles'
   
   resources :facts, except: [:index, :show]

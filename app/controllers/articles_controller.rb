@@ -21,6 +21,7 @@ class ArticlesController < ApplicationController
 
   def show
     @comment = Comment.new
+    @user = current_user
   end
 
   def edit
@@ -41,10 +42,23 @@ class ArticlesController < ApplicationController
     @articles = current_user.articles.order(created_at: :desc)
   end
 
+  def likes
+    @user = current_user
+    @article = Article.find(params[:id])
+    if @article.users_likes.include?(@user.id)
+      @article.users_likes = @article.users_likes.pop(@article.users_likes.find_index(@user.id))
+    else
+      @article.users_likes << @user.id
+    end
+    authorize @article
+    @article.save!
+    redirect_to article_path(@article)
+  end
+
   private
 
   def article_params
-    params.require(:article).permit(:title, :subtitle, :content, :photo, communities: [], interests: [])
+    params.require(:article).permit(:title, :subtitle, :content, :photo, communities: [], interests: [], users_likes: [])
   end
 
   def set_article
