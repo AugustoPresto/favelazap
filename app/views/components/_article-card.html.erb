@@ -6,7 +6,7 @@
           <div class="card my-2">
             <%= cl_image_tag article.photo.key, crop: :fill, gravity: :auto, class: "card-img-top green" %>
             <div class="card-body">
-              <p class="card-text"><strong><%= article.title.truncate(60) %></strong></p>
+              <p class="card-text"><strong><%= article.title %></strong></p>
             </div>
             <p class="created-at-card d-flex justify-content-end"><%= article.created_at.strftime("%e %B %Y") %></p>
           </div>
