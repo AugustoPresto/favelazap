@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
     @article.interests.reject! { |e| e == "" }
     authorize @article
     if @article.save
-      redirect_to my_articles_path
+      redirect_to news_path
     else
       render :new
     end
