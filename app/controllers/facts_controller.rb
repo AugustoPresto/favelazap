@@ -13,7 +13,7 @@ class FactsController < ApplicationController
     @fact.interests.reject! { |e| e == "" }
     authorize @fact
     if @fact.save
-      redirect_to my_facts_path
+      redirect_to news_path
     else
       render :new
     end
