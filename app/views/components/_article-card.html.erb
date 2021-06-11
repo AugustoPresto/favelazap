@@ -13,8 +13,16 @@
         <% end %>
         <% if @user == article.user %>
           <div class="icons">
-            <div class="delete-icon"><i class="fas fa-trash"></i></div>
-            <div class="edit-icon"><i class="fas fa-edit"></i></div>
+            <div class="delete-icon">
+              <%= link_to article_path(article.id), method: :delete, data: { confirm: "Delete #{article.title}?" } do %>
+              <i class="fas fa-trash"></i>          
+              <% end %>
+            </div>
+            <div class="edit-icon">
+              <%= link_to edit_article_path(article.id) do %>
+              <i class="fas fa-edit"></i>
+              <% end %>
+            </div>
           </div>
         <% end %>
       </div>

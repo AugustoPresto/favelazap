@@ -28,12 +28,12 @@ class ArticlesController < ApplicationController
 
   def update
     @article.update(article_params)
-    redirect_to article_path(@article)
+    redirect_to my_news_path
   end
 
   def destroy
     @article.destroy
-    redirect_to my_articles_path
+    redirect_to my_news_path
   end
 
   def my_articles

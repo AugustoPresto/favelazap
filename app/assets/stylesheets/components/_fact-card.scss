@@ -29,18 +29,22 @@
     position: absolute;
     left: 41%;    
   }
-
-  .delete-icon{
-    margin-right: 6px;
+  .icons {
+    margin-bottom: 3px;
   }
-
-}
-
-
-.edit-icon-red :hover{
-  color: #d67878;
-}
-
-.icons {
-  margin-bottom: 3px;
+  .delete-icon{
+    color: $logo-dark-green;
+  }
+  
+  .edit-icon{
+    color: $logo-dark-green;
+  }
+  
+  .delete-icon :hover{
+    color: $logo-green;
+  }
+  
+  .edit-icon :hover{
+    color: $logo-green;
+  }
 }

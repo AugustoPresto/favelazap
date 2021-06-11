@@ -31,8 +31,16 @@
               <p class="fact-time">Added 1 hour ago</p>
               <% if @user == fact.user %>
                 <div class="icons">
-                  <div class="delete-icon"><i class="fas fa-trash"></i></div>
-                  <div class="edit-icon"><i class="fas fa-edit"></i></div>
+                  <div class="delete-icon">
+                    <%= link_to fact_path(fact.id), method: :delete, data: { confirm: "Delete #{fact.title}?" } do %>
+                    <i class="fas fa-trash"></i>
+                    <% end %>
+                  </div>
+                  <div class="edit-icon">
+                    <%= link_to edit_fact_path(fact.id) do %>
+                    <i class="fas fa-edit"></i>
+                    <% end %>
+                  </div>
                 </div>
               <% end %>
             </div>

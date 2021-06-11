@@ -24,12 +24,12 @@ class FactsController < ApplicationController
 
   def update
     @fact.update(fact_params)
-    redirect_to my_facts_path
+    redirect_to my_news_path
   end
 
   def destroy
     @fact.destroy
-    redirect_to my_facts_path
+    redirect_to my_news_path
   end
 
   def my_facts
