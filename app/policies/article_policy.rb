@@ -28,4 +28,8 @@ class ArticlePolicy < ApplicationPolicy
   def news?
     !user.reporter
   end
+
+  def likes?
+    true
+  end
 end
