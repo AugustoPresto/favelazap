@@ -221,3 +221,131 @@ fact.user = users.sample
 fact.photo.attach(io: fact_photo2, filename: 'fact2.jpg', content_type: 'image/jpg')
 fact.save!
 facts << fact
+
+puts 'creating comments...'
+
+comment = Comment.new(
+  content: "Congratulations, bringing dignity to families who are experiencing difficulties"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "I think these initiatives are very important. I would love if it came to us that we have a project with 230 children here at Granja Lisboa"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "God bless the people who are doing this always."
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "Let's go that still has a lot of work"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "Thanks a lot 👏👏👏👏👏 congratulations, your work is very special"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "I wish this kind of work could reach more people!"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "I thank you for the incredible work you do, FavelaZap"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "Proactiveness of people who really know the communities and are together in actions like this"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "❤️❤️"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "God bless each one for all the good you have done for us😍😍🙌"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "A big hug from Nova Brasília, Rio! Thank you, people!"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "Congratulations on the excellent social work, gratitude to the supporters of FavelaZap"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "How do I apply to participate?"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "Hello, good afternoon, I want to thank cufa brasil for your beautiful work that you do for all of us, my name and Ana Flávia, I'm from 5 marias, and our representative here is fernanda domingos 👏👏👏"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "Please do another action like this here in Chatuba de Mesquita RJ"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "You are 10,000! #mothers from the slums brick sepetiba"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "That's amazing. Thanks everybody who helps us"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
+
+comment = Comment.new(
+  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+)
+comment.user = users.sample
+comment.article = articles.sample
+comment.save!
