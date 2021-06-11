@@ -9,8 +9,6 @@ class FactsController < ApplicationController
   def create
     @fact = Fact.new(fact_params)
     @fact.user = current_user
-    @fact.communities.reject! { |e| e == "" }
-    @fact.interests.reject! { |e| e == "" }
     authorize @fact
     if @fact.save
       redirect_to news_path
@@ -24,12 +22,12 @@ class FactsController < ApplicationController
 
   def update
     @fact.update(fact_params)
-    redirect_to my_facts_path
+    redirect_to my_news_path
   end
 
   def destroy
     @fact.destroy
-    redirect_to my_facts_path
+    redirect_to my_news_path
   end
 
   def my_facts

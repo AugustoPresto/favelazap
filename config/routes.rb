@@ -9,9 +9,6 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
   get  'articles/:id/likes', to: 'articles#likes', as: "likes"
-
-  get 'my_articles', to: 'articles#my_articles'
   
   resources :facts, except: [:index, :show]
-  get 'my_facts', to: 'facts#my_facts'
 end

@@ -13,6 +13,7 @@ puts 'cleaning data base'
 Article.destroy_all
 User.destroy_all
 Fact.destroy_all
+Comment.destroy_all
 
 puts 'creating users...'
 users = []
