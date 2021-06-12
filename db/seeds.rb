@@ -85,6 +85,7 @@ article_photo3 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.c
 article_photo4 = URI.open('http://43.mostra.org/_img/_filmes/186.jpg')
 article_photo5 = URI.open('https://www.vozdascomunidades.com.br/wp-content/uploads/2020/06/rafael-oliveira.jpeg')
 article_photo6 = URI.open('https://images.unsplash.com/photo-1595455645549-99352c73f061?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')
+article_photo7 = URI.open('https://images.unsplash.com/photo-1565807511924-ba5ec83f2e09?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib')
 article_photo8 = URI.open('https://veja.abril.com.br/wp-content/uploads/2021/06/DOM-08.jpg.jpg?quality=70&strip=info&resize=680,453')
 article_photo9 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com/wp-content/uploads/2021/06/04140528/E3DLTFoXIAEGA65.jpeg')
 
