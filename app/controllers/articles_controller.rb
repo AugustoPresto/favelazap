@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
     @user = current_user
     @article = Article.find(params[:id])
     if @article.users_likes.include?(@user.id)
-      @article.users_likes = @article.users_likes.pop(@article.users_likes.find_index(@user.id))
+      @article.users_likes.delete_at(@article.users_likes.find_index(@user.id))
     else
       @article.users_likes << @user.id
     end
