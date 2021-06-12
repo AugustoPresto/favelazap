@@ -1,19 +1,24 @@
-<h3 class="text-center">Your Profile</h3>
-<hr>
-<p><%= cl_image_tag @user.avatar.key, class: "avatar-bordered" %><%= @user.email %></p>
-<hr>
-<div class="container">
-  <h3 class="tags-title">Tags</h3>
-  <ul>
-    <% @user.communities.each do |community| %>
-      <li class="tag-selector"><%= community %></li>
-    <% end %>
-  </ul>
-  <ul>
-    <% @user.interests.each do |interest| %>
-      <li class="tag-selector"><%= interest %></li>
-    <% end %>
-  </ul>
+<div class="container-profile">
+  <div class="photo-e-mail text-center">
+    <div><p><%= cl_image_tag @user.avatar.key, class: "avatar-bordered size_photo"%></p></div>
+    <div class="profile-email"><p><%= @user.email %></p></div>
+  </div>
+  <hr>
+  <div>
+    <h6>Tags</h6>
+    <ul>
+      <% @user.communities.each do |community| %>
+        <li class="tag-selector-profile"><%= community %></li>
+      <% end %>
+   </ul>
+    <ul>
+      <% @user.interests.each do |interest| %>
+        <li class="tag-selector-profile"><%= interest %></li>
+      <% end %>
+    </ul>
+  </div>
+  <hr>
+  <div class="edit-link d-flex justify-content-center">
+    <%= link_to "Edit your profile.", edit_user_registration_path, class: "btn btn-light"%>
+  </div>
 </div>
-<hr>
-<%= link_to "Edit your profile.", edit_user_registration_path, class: "btn btn-success"%>
