@@ -1,3 +1,7 @@
+#article-page{
+ // background-color: rgba($color: $logo-green, $alpha: 1);
+}
+
 .card-img-top {
   max-height: 180px !important;
   object-fit: cover;
@@ -5,12 +9,13 @@
 
 .card-body{
   position: relative;
+  padding: 0.7rem 0.25rem 0.3rem 0.25rem;
 }
 
 .created-at-card {
   font-size: 12px;
   color: #a7a7a7;
-  margin-bottom: 10px;
+  margin-bottom: 1vw;
   padding: 0 20px;
 }
 
@@ -43,19 +48,18 @@
   color: $logo-green;
 }
 
+.card-text{
+  font-weight: bolder;
+  font-size: 5.5vw;
+}
+
 .card {
-  background-color: #e7fdea;
-  box-shadow: 2px 2px white, 4px 4px $logo-green, 6px 6px $logo-dark-green;
+  background-color: $page-white;
+  box-shadow: 0.5px 0.5px gray;
   border-radius: 5px;
 }
 
 .card:hover{
   background-color: #e7fdea;
-  box-shadow: 2px 2px white, 4px 4px $logo-green, 6px 6px $logo-dark-green, 8px 8px black;
-}
-
-.green {
-  border-color: $logo-green;
-  border-radius: 5px;
-  border-style: double;
+  box-shadow: 1px 1px gray;
 }
