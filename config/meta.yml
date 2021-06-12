@@ -1,0 +1,7 @@
+
+# config/meta.yml
+
+meta_product_name: "FavelaZap"
+meta_title: "FavelaZap - uma nova maneira de se informar"
+meta_description: "FavelaZap é uma plataforma para ajudar o morador das comunidades cariocas a se informar sobre o que lhe interessa, de fontes que entendem a sua realidade!"
+meta_image: "cover.png" # should exist in `app/assets/images/`

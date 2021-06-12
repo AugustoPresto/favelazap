@@ -1,3 +1,8 @@
+<!-- app/views/offers/show.html.erb -->
+<% content_for :meta_title, "#{@article.title} - FavelaZap" %>
+<% content_for :meta_description, @article.subtitle %>
+
+
 <header class="container">
   <h1 class="text-left pt-2 font-weight-bold title" ><%= @article.title %></h1>
   <h2 class="text-left pb-1 subtitle"><%= @article.subtitle %></h2>
