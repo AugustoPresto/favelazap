@@ -77,3 +77,16 @@ a {
   padding-top: 15px;
 }
 
+h3, label {
+  font-weight: bolder;
+}
+
+.collection_check_boxes {
+  font-weight: normal;
+  color: white;
+}
+
+legend {
+  color: $logo-dark-green;
+}
+
