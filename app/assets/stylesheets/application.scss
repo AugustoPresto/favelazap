@@ -41,3 +41,50 @@ a {
     text-decoration: none;
     }
 }
+
+.container-edit {
+  padding: 10px;
+  font-weight: bold;
+  font-family: $font-default;
+}
+
+.edit-container {
+  border-radius: 5px; 
+  box-shadow: 1px 1px 3px $logo-dark-green;
+  color: $logo-dark-green;
+  background-image: linear-gradient(to bottom right, $logo-green, #2c973c);
+}
+
+.communities {
+  color: white;
+  font-weight: normal;
+}
+
+.interests {
+  color: white;
+  font-weight: normal;
+}
+
+.form-control {
+  border-radius: 10px; 
+  color: $logo-green; 
+  font-weight: bolder;
+}
+
+.form-actions {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px $logo-dark-green;
+}
+
+.form-actions:hover {
+  background: $logo-dark-green;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px $logo-dark-green;
+  color: $logo-green;
+}
+
+.cancel-account {
+  padding-top: 15px;
+}
+

@@ -1,14 +1,16 @@
-h3, h4 {
-    color: $logo-dark-green;
+h6 {
+    color: white;
+    font-weight: bold;
 }
 
 .container-profile {
     background-color: $logo-green;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 1px 1px 1px $logo-dark-green;
+    box-shadow: 1px 1px 3px $logo-dark-green;
     color: $logo-dark-green;
-    background-image: linear-gradient(to bottom right, $logo-green, $logo-dark-green);
+    background-image: linear-gradient(to bottom right, $logo-green, #2c973c);
+    font-family: $font-default;
 }
 
 .tag-selector-profile {
@@ -18,33 +20,35 @@ h3, h4 {
     padding: 0.1rem 0.5rem;
     background-color: #ECEAFF;
     color: $logo-dark-green;
-    border: 1px solid $logo-dark-green;
+    border: 1px solid $logo-green;
     margin-right: 0.6rem;
-    box-shadow: 0.5px 0.5px 0.5px $logo-dark-green;
+    box-shadow: 0.5px 0.5px 5px $logo-dark-green;
   }
 
 .size_photo {
     height: 200px;
     width: 200px;
     border-width: 6px;
-    box-shadow: 2px 2px 2px $logo-dark-green;
+    box-shadow: 2px 2px 5px $logo-dark-green;
 }
 
 .btn-light {
     color: $logo-dark-green;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px $logo-dark-green;
+    box-shadow: 1px 1px 5px $logo-dark-green;
 }
 
 .btn-light:hover {
     color: white;
     background: $logo-dark-green;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px $logo-dark-green;
+    box-shadow: 1px 1px 10px $logo-dark-green;
 }
 
 .profile-email {
     background-color: white;
+    color: $logo-green;
+    font-weight: bold;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px $logo-dark-green;
+    box-shadow: 1px 1px 5px $logo-dark-green;
 }
