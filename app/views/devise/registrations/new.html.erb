@@ -1,9 +1,12 @@
-<h2>Sign up</h2>
+<div class="container-edit">
+  <div class="edit-container text-center p-2 m-2 pt-10">
+
+<h3>Sign up</h3>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs text-center">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -15,8 +18,10 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <div class="collection_check_boxes text-left">            
     <%= f.input :communities, include_hidden: false, as: :check_boxes, collection: User::COMMUNITIES %>
     <%= f.input :interests, include_hidden: false, as: :check_boxes, collection: User::INTERESTS %>
+    </div>
   </div>
 
   <div class="form-actions">
@@ -25,3 +30,6 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>
+</div>
