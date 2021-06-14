@@ -3,7 +3,7 @@
     <input type="checkbox" id="check">
     <label for="check" class="check-avatar">
       <% if current_user.avatar.present? %>
-        <%= cl_image_tag current_user.avatar.key, class: "avatar-bordered" %>
+        <%= cl_image_tag current_user.avatar.key, class: "avatar-bordered border_photo" %>
       <% else %>
         <%= image_tag "generic-user.jpg", class: "avatar-bordered" %>
       <% end %>
