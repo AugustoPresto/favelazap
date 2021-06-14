@@ -21,10 +21,10 @@
 
 .headline h1 {
   color: $page-white;
-  font-size: 31px;
+  font-size: 5.5vh;
   text-align: center;
   letter-spacing: 0px;
-  font-family: 'Black Ops One', cursive;
+  font-family: $font-default;
   text-shadow: -75px -50px 1px #345333, -150px -100px 1px #93e990;
 }
 
