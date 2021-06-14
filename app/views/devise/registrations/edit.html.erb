@@ -23,7 +23,7 @@
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
     <div class="check-box text-left">
-      <div class="communities"><%= f.input :communities, include_hidden: false, as: :check_boxes, collection: User::COMMUNITIES %></div>
+          <div class="communities"><%= f.input :communities, include_hidden: false, as: :check_boxes, collection: User::COMMUNITIES %></div>
       <div class="interests"><%= f.input :interests, include_hidden: false, as: :check_boxes, collection: User::INTERESTS %></div>
     </div>
     
