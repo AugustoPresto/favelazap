@@ -17,10 +17,11 @@ h6 {
     display: inline-block;
     font-size: 0.8rem;
     border-radius: 50rem;
-    padding: 0.1rem 0.5rem;
-    background-color: #ECEAFF;
-    color: $logo-dark-green;
-    border: 1px solid $logo-green;
+    padding: 0.005rem 0.4rem;
+    background-color: white;
+    color: $logo-green;
+    font-weight: bolder;
+    border: 1px solid white;
     margin-right: 0.6rem;
     box-shadow: 0.5px 0.5px 5px $logo-dark-green;
   }
@@ -34,6 +35,7 @@ h6 {
 
 .btn-light {
     color: $logo-dark-green;
+    font-weight: bolder;
     border-radius: 5px;
     box-shadow: 1px 1px 5px $logo-dark-green;
 }
@@ -42,6 +44,7 @@ h6 {
     color: white;
     background: $logo-dark-green;
     border-radius: 5px;
+    font-weight: bolder;
     box-shadow: 1px 1px 10px $logo-dark-green;
 }
 
