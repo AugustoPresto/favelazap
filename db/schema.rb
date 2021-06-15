@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_06_15_160820) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -96,6 +97,8 @@ ActiveRecord::Schema.define(version: 2021_06_15_160820) do
     t.boolean "reporter", default: false
     t.string "communities", default: [], array: true
     t.string "interests", default: [], array: true
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

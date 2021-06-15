@@ -31,7 +31,7 @@
   </div>
   <%= cl_image_tag @article.photo.key, crop: :fill, gravity: :auto, class: "card-img-top" %>
   <div class="d-flex justify-content-start align-items-end pt-3">
-    <p class="reporter-name"><strong><em>By <%= @article.user.email %></em></strong></p>
+    <p class="reporter-name"><strong><em>By <%= @article.user.fullname %></em></strong></p>
     <%= cl_image_tag @article.user.avatar.key, class: "avatar avatar-show mb-1" %>
   </div>
   <p class="created-at"><%= @article.created_at.strftime("%e %B %Y") %></p>
@@ -64,7 +64,7 @@
     <% else %>
       <% @article.comments.each do |comment| %>
         <p class="comment-content" id="comment-<%= comment.id %>"><%= comment.content %></p>
-        <p class="comment-user"><em>By <%= comment.user.email %></em></p>
+        <p class="comment-user"><em>By <%= comment.user.fullname %></em></p>
       <% end %>
     <% end %>
   </div>
