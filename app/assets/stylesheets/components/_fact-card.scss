@@ -26,20 +26,28 @@
     color: #bbbbbb;
   }
 
-  .icons{
-    text-align: center;
+  .fact-icons {
     position: absolute;
-    left: 41%;
-    bottom: -5px;
+    bottom: -10px;
+    left: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 14%;
     text-shadow: 0 0 1px white;
   }
 
-  .delete-icon{
-    margin-right: 10px;
+  .fact-delete-icon {
+    color: $logo-dark-green;
     font-size: 20px;
+    margin-right: 20px;
   }
 
-  .edit-icon {
+  .fact-delete-icon :hover {
+    color: $logo-green;
+  }
+
+  .fact-edit-icon {
+    color: $logo-dark-green;
     font-size: 20px;
   }
 }

@@ -23,9 +23,9 @@ photo1 = URI.open('http://www.nacaoz.com.br/2015/wp-content/uploads/2017/04/Mano
 photo2 = URI.open('https://cdn.britannica.com/s:575x450/84/154784-004-BD0C145B.jpg')
 photo3 = URI.open('https://cdns-images.dzcdn.net/images/artist/ee783d910ee783b068806153d026a230/264x264.jpg')
 photo4 = URI.open('https://studiosol-a.akamaihd.net/letras/215x215/fotos/3/1/4/f/314f5fc559418f77dfd4cc594176843f.jpg')
-photo5 = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Gilberto_Gil_1719MC198.jpg/1200px-Gilberto_Gil_1719MC198.jpg')
+photo5 = URI.open('https://studiosol-a.akamaihd.net/letras/500x500/fotos/b/1/c/d/b1cde55654a5ca52ca65bc5d468c1c43.jpg')
 photo6 = URI.open('https://miro.medium.com/max/400/1*JryFlqhfUj8Vi8flwudC2w.jpeg')
-photo7 = URI.open('https://citacoes.in/media/authors/john-coltrane.jpeg')
+photo7 = URI.open('http://www.jazzmessengers.com/blog/wp-content/uploads/2019/12/Coltrane.jpg')
 photo8 = URI.open('https://audio.mgtradio.net/storage/artists/bebel%20gilberto-1.jpg')
 
 user1 = User.new(
@@ -109,7 +109,7 @@ user7 = User.new(
   first_name: "Someone",
   last_name: "From Le Wagon"
 )
-user7.avatar.attach(io: photo7, filename: 'coltrane.jpg', content_type: 'image/jpeg')
+user7.avatar.attach(io: photo7, filename: 'coltrane.jpg', content_type: 'image/jpg')
 user7.save!
 
 user8 = User.new(
