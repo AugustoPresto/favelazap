@@ -2,6 +2,8 @@
   <div class="photo-e-mail text-center">
     <div><p><%= cl_image_tag @user.avatar.key, class: "avatar-bordered size_photo"%></p></div>
     <div class="profile-email"><p><%= @user.email %></p></div>
+    <div class="profile-email"><p><%= @user.first_name %></p></div>
+    <div class="profile-email"><p><%= @user.last_name %></p></div>
   </div>
   <hr>
   <div>

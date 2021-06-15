@@ -3,13 +3,9 @@
     <h2>Estamos presentes nas seguintes comunidades:</h2>
     <div class="container col-12">
       <ul class="list-of-comunities row">
-        <li class="comunity col-5">Rocinha <i class="fas fa-map-marker-alt"></i></li>
-        <li class="comunity col-5">Vidigal <i class="fas fa-map-marker-alt"></i></li>
-        <li class="comunity col-5">Borel <i class="fas fa-map-marker-alt"></i></li>
-        <li class="comunity col-5">Formiga <i class="fas fa-map-marker-alt"></i></li>
-        <li class="comunity col-5">Macacos <i class="fas fa-map-marker-alt"></i></li>
-        <li class="comunity col-5">Barbante  <i class="fas fa-map-marker-alt"></i></li>
-        <li class="comunity col-5">Rola <i class="fas fa-map-marker-alt"></i></li>
+      <% User::COMMUNITIES.each do |community| %>
+        <li class="comunity col-5"><%= community %> <i class="fas fa-map-marker-alt" id="marker"></i></li>
+      <% end %>
       </ul>
     </div>
   </div>
