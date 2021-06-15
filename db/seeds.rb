@@ -33,9 +33,9 @@ user1 = User.new(
   password: "abc123",
   reporter: "true",
   communities: ["Rocinha", "Vidigal"],
-  interests: ["Sports", "Culture"]
-  # first_name: "Felippe",
-  # last_name: "Santana"
+  interests: ["Sports", "Culture"],
+  first_name: "Manoel",
+  last_name: "Soares"
 )
 user1.avatar.attach(io: photo1, filename: 'thomas.jpg', content_type: 'image/jpg')
 user1.save!
@@ -45,9 +45,9 @@ user2 = User.new(
   password: "abc123",
   reporter: "true",
   communities: ["Borel", "Formiga"],
-  interests: ["Sports", "Economy"]
-  # first_name: "Augusto",
-  # last_name: "Souza"
+  interests: ["Sports", "Economy"],
+  first_name: "Nina",
+  last_name: "Simone"
 )
 user2.avatar.attach(io: photo2, filename: 'nina.jpg', content_type: 'image/jpg')
 user2.save!
@@ -57,9 +57,9 @@ user3 = User.new(
   password: "abc123",
   reporter: "true",
   communities: ["Juramento", "Macacos"],
-  interests: ["Sports", "Economy"]
-  # first_name: "Pedro",
-  # last_name: "Breischiodshisdhg"
+  interests: ["Sports", "Economy"],
+  first_name: "Sevana",
+  last_name: "Bilquily"
 )
 user3.avatar.attach(io: photo3, filename: 'sevana.jpg', content_type: 'image/jpg')
 user3.save!
@@ -69,9 +69,9 @@ user4 = User.new(
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
-  interests: ["Health", "Security"]
-  # first_name: "Yuri",
-  # last_name: "Gravatá"
+  interests: ["Health", "Security"],
+  first_name: "Yuri",
+  last_name: "Gravatá"
 )
 user4.avatar.attach(io: photo4, filename: 'bernhoft.jpg', content_type: 'image/jpg')
 user4.save!
@@ -81,9 +81,9 @@ user5 = User.new(
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
-  interests: ["Health", "Security"]
-  # first_name: "Yuri",
-  # last_name: "Gravatá"
+  interests: ["Health", "Security"],
+  first_name: "Pedro",
+  last_name: "Breischspacsa"
 )
 user5.avatar.attach(io: photo5, filename: 'gil.jpg', content_type: 'image/jpg')
 user5.save!
@@ -93,9 +93,9 @@ user6 = User.new(
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
-  interests: ["Health", "Security"]
-  # first_name: "Yuri",
-  # last_name: "Gravatá"
+  interests: ["Health", "Security"],
+  first_name: "Alexandre",
+  last_name: "CTO"
 )
 user6.avatar.attach(io: photo6, filename: 'liniker.jpg', content_type: 'image/jpg')
 user6.save!
@@ -105,9 +105,9 @@ user7 = User.new(
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
-  interests: ["Health", "Security"]
-  # first_name: "Yuri",
-  # last_name: "Gravatá"
+  interests: ["Health", "Security"],
+  first_name: "Someone",
+  last_name: "From Le Wagon"
 )
 user7.avatar.attach(io: photo7, filename: 'coltrane.jpg', content_type: 'image/jpeg')
 user7.save!
@@ -117,9 +117,9 @@ user8 = User.new(
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
-  interests: ["Health", "Security"]
-  # first_name: "Yuri",
-  # last_name: "Gravatá"
+  interests: ["Health", "Security"],
+  first_name: "Iza",
+  last_name: "Meyer"
 )
 user8.avatar.attach(io: photo8, filename: 'bebel.jpg', content_type: 'image/jpg')
 user8.save!
