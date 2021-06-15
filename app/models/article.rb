@@ -1,6 +1,7 @@
 class Article < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
   has_one_attached :photo
 
   validates :title, :subtitle, :content, :communities, :interests, presence: true

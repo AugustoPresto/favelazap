@@ -18,8 +18,13 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @like = Like.new
     @comment = Comment.new
     @user = current_user
+    @liked = Like.where(user_id: current_user.id, article_id: @article.id).exists?
+    if @liked
+      @user_like = Like.find(Like.where(user_id: current_user.id, article_id: @article.id).ids.first)
+    end
   end
 
   def edit
@@ -45,7 +50,8 @@ class ArticlesController < ApplicationController
     end
     authorize @article
     @article.save!
-    redirect_to article_path(@article)
+    #redirect_to article_path(@article)
+    
   end
 
   private

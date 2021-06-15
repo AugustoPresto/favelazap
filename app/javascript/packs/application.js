@@ -18,12 +18,17 @@ ActiveStorage.start()
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
+
 // External imports
 import "bootstrap";
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 //= require serviceworker-companion
+//= require jquery
+//= require jquery_ujs
+
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register('/serviceworker.js')
