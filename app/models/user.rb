@@ -22,6 +22,6 @@ class User < ApplicationRecord
   validates :email, format: { with: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/, message: "Invalid email" }
 
   def fullname
-    "#{first_name.capitalize} #{last_name.capitalize}"
+    "#{first_name} #{last_name}"
   end
 end
