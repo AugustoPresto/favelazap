@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
   resources :articles, except: [:index] do
     resources :comments, only: :create
+    resources :likes, only: [:create, :destroy]
   end
-  get  'articles/:id/likes', to: 'articles#likes', as: "likes"
+  put  'articles/:id/likes', to: 'articles#likes', as: "likes"
   
   resources :facts, except: [:index, :show]
 end
