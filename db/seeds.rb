@@ -17,18 +17,19 @@ Comment.destroy_all
 
 puts 'creating users...'
 users = []
+reporters = []
 
 photo1 = URI.open('http://www.nacaoz.com.br/2015/wp-content/uploads/2017/04/Manoel-Soares_abr17-600x598.jpg')
 photo2 = URI.open('https://cdn.britannica.com/s:575x450/84/154784-004-BD0C145B.jpg')
-photo3 = URI.open('https://audio.mgtradio.net/storage/artists/bebel%20gilberto-1.jpg')
+photo3 = URI.open('https://cdns-images.dzcdn.net/images/artist/ee783d910ee783b068806153d026a230/264x264.jpg')
 photo4 = URI.open('https://studiosol-a.akamaihd.net/letras/215x215/fotos/3/1/4/f/314f5fc559418f77dfd4cc594176843f.jpg')
 photo5 = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Gilberto_Gil_1719MC198.jpg/1200px-Gilberto_Gil_1719MC198.jpg')
 photo6 = URI.open('https://miro.medium.com/max/400/1*JryFlqhfUj8Vi8flwudC2w.jpeg')
 photo7 = URI.open('https://citacoes.in/media/authors/john-coltrane.jpeg')
-photo8 = URI.open('https://cdns-images.dzcdn.net/images/artist/ee783d910ee783b068806153d026a230/264x264.jpg')
+photo8 = URI.open('https://audio.mgtradio.net/storage/artists/bebel%20gilberto-1.jpg')
 
 user1 = User.new(
-  email: Faker::Internet.email,
+  email: "teste1@favelazap.com",
   password: "abc123",
   reporter: "true",
   communities: ["Rocinha", "Vidigal"],
@@ -40,9 +41,9 @@ user1.avatar.attach(io: photo1, filename: 'thomas.jpg', content_type: 'image/jpg
 user1.save!
 
 user2 = User.new(
-  email: Faker::Internet.email,
+  email: "teste2@favelazap.com",
   password: "abc123",
-  reporter: "false",
+  reporter: "true",
   communities: ["Borel", "Formiga"],
   interests: ["Sports", "Economy"]
   # first_name: "Augusto",
@@ -52,19 +53,19 @@ user2.avatar.attach(io: photo2, filename: 'nina.jpg', content_type: 'image/jpg')
 user2.save!
 
 user3 = User.new(
-  email: Faker::Internet.email,
+  email: "teste3@favelazap.com",
   password: "abc123",
-  reporter: "false",
+  reporter: "true",
   communities: ["Juramento", "Macacos"],
   interests: ["Sports", "Economy"]
   # first_name: "Pedro",
   # last_name: "Breischiodshisdhg"
 )
-user3.avatar.attach(io: photo3, filename: 'bebel.jpg', content_type: 'image/jpg')
+user3.avatar.attach(io: photo3, filename: 'sevana.jpg', content_type: 'image/jpg')
 user3.save!
 
 user4 = User.new(
-  email: Faker::Internet.email,
+  email: "teste4@favelazap.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
@@ -76,7 +77,7 @@ user4.avatar.attach(io: photo4, filename: 'bernhoft.jpg', content_type: 'image/j
 user4.save!
 
 user5 = User.new(
-  email: Faker::Internet.email,
+  email: "teste5@favelazap.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
@@ -88,7 +89,7 @@ user5.avatar.attach(io: photo5, filename: 'gil.jpg', content_type: 'image/jpg')
 user5.save!
 
 user6 = User.new(
-  email: Faker::Internet.email,
+  email: "teste6@favelazap.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
@@ -100,7 +101,7 @@ user6.avatar.attach(io: photo6, filename: 'liniker.jpg', content_type: 'image/jp
 user6.save!
 
 user7 = User.new(
-  email: Faker::Internet.email,
+  email: "teste7@favelazap.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
@@ -112,7 +113,7 @@ user7.avatar.attach(io: photo7, filename: 'coltrane.jpg', content_type: 'image/j
 user7.save!
 
 user8 = User.new(
-  email: Faker::Internet.email,
+  email: "teste8@favelazap.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
@@ -120,12 +121,12 @@ user8 = User.new(
   # first_name: "Yuri",
   # last_name: "Gravatá"
 )
-user8.avatar.attach(io: photo8, filename: 'sevana.jpg', content_type: 'image/jpg')
+user8.avatar.attach(io: photo8, filename: 'bebel.jpg', content_type: 'image/jpg')
 user8.save!
 
-users << user1
-users << user2
-users << user3
+reporters << user1
+reporters << user2
+reporters << user3
 users << user4
 users << user5
 users << user6
@@ -163,7 +164,7 @@ article = Article.new(
   communities: ["Borel", "Formiga"],
   interests: ["Sports", "Economy"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo1, filename: 'article1.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -175,7 +176,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos"],
   interests: ["Sports", "Economy"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo2, filename: 'article2.jpg', content_type: 'image/jpeg')
 article.save!
 articles << article
@@ -187,7 +188,7 @@ article = Article.new(
   communities: ["Rocinha", "Vidigal"],
   interests: ["Health", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo3, filename: 'article3.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -199,7 +200,7 @@ article = Article.new(
   communities: ["Rocinha", "Vidigal"],
   interests: ["Health", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo4, filename: 'article4.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -211,7 +212,7 @@ article = Article.new(
   communities: ["Borel", "Formiga"],
   interests: ["Sports", "Economy"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo5, filename: 'article5.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -224,7 +225,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos"],
   interests: ["Sports", "Economy"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo6, filename: 'article6.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -236,7 +237,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo7, filename: 'article7.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -248,7 +249,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo8, filename: 'article8.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -260,7 +261,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo9, filename: 'article9.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -272,7 +273,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo10, filename: 'article10.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -285,7 +286,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo11, filename: 'article11.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -298,7 +299,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo12, filename: 'article12.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -310,7 +311,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo13, filename: 'article13.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -322,7 +323,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo14, filename: 'article14.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -335,7 +336,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo15, filename: 'article15.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -349,7 +350,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo16, filename: 'article16.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -362,7 +363,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo17, filename: 'article17.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -374,7 +375,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo18, filename: 'article18.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -387,7 +388,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo19, filename: 'article19.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -401,7 +402,7 @@ article = Article.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-article.user = users.sample
+article.user = reporters.sample
 article.photo.attach(io: article_photo20, filename: 'article20.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -425,7 +426,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo1, filename: 'fact1.jpg', content_type: 'image/jpeg')
 fact.save!
 facts << fact
@@ -435,7 +436,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo2, filename: 'fact2.jpg', content_type: 'image/png')
 fact.save!
 facts << fact
@@ -445,7 +446,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo3, filename: 'fact3.jpg', content_type: 'image/jpeg')
 fact.save!
 facts << fact
@@ -455,7 +456,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo4, filename: 'fact4.jpg', content_type: 'image/jpg')
 fact.save!
 facts << fact
@@ -465,7 +466,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo5, filename: 'fact5.jpg', content_type: 'image/jpeg')
 fact.save!
 facts << fact
@@ -475,7 +476,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo6, filename: 'fact6.jpg', content_type: 'image/jpg')
 fact.save!
 facts << fact
@@ -485,7 +486,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo7, filename: 'fact7.jpg', content_type: 'image/jpeg')
 fact.save!
 facts << fact
@@ -495,7 +496,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo8, filename: 'fact8.jpg', content_type: 'image/jpeg')
 fact.save!
 facts << fact
@@ -505,7 +506,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo9, filename: 'fact9.jpg', content_type: 'image/jpg')
 fact.save!
 facts << fact
@@ -515,7 +516,7 @@ fact = Fact.new(
   communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
   interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
 )
-fact.user = users.sample
+fact.user = reporters.sample
 fact.photo.attach(io: fact_photo10, filename: 'fact10.jpg', content_type: 'image/jpg')
 fact.save!
 facts << fact
@@ -663,70 +664,70 @@ comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "Please help us at Nova Brasília too, things are really hard here, we have nothing to leave this situation."
 )
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "Here in Rocinha we relly like it. Great!"
 )
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "So sad this kind of situation in our community.😢"
 )
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "Go for it, my friends! Thanks for the support 🙏"
 )
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "We have the same happening in Jacarezinho"
 )
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "Where is the mayor who does nothing to help us???"
 )
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "👊👊💪"
 )
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "Thanks for the teacher Stéphany I had the opportunity to study and became a better person and give it back to my community"
 )
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "❤️❤️"
 )
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
 
 comment = Comment.new(
-  content: "Wow, I even got goosebumps! Congratulations Come to Grajaú São Paulo"
+  content: "Thats what we are talking about!"
 )
 comment.user = users.sample
 comment.article = articles.sample
