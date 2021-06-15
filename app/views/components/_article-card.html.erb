@@ -11,7 +11,7 @@
             <p class="created-at-card d-flex justify-content-end"><%= article.created_at.strftime("%e %B %Y") %></p>
             <% if @user == article.user %>
               <div class="icons">
-                <%= link_to article_path(article), method: :delete do %>
+                <%= link_to article_path(article), method: :delete, data: {confirm: "Are you sure?"} do %>
                   <div class="delete-icon"><i class="fas fa-trash"></i></div>
                 <% end %>
                 <%= link_to edit_article_path(article) do %>

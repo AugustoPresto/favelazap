@@ -22,7 +22,7 @@
 .icons {
   position: absolute;
   bottom: 3px;
-  left: 16px;
+  left: 18px;
   display: flex;
   justify-content: space-around;
   width: 14%;
@@ -31,13 +31,13 @@
 
 .delete-icon{
   color: $logo-dark-green;
-  font-size: 15px;
+  font-size: 16px;
   margin-right: 24px;
 }
 
 .edit-icon{
   color: $logo-dark-green;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .delete-icon :hover{
