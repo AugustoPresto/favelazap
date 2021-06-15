@@ -65,7 +65,7 @@ user3.avatar.attach(io: photo3, filename: 'sevana.jpg', content_type: 'image/jpg
 user3.save!
 
 user4 = User.new(
-  email: "teste4@favelazap.com",
+  email: "teste4@lewagon.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
@@ -77,7 +77,7 @@ user4.avatar.attach(io: photo4, filename: 'bernhoft.jpg', content_type: 'image/j
 user4.save!
 
 user5 = User.new(
-  email: "teste5@favelazap.com",
+  email: "teste5@lewagon.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
@@ -89,7 +89,7 @@ user5.avatar.attach(io: photo5, filename: 'gil.jpg', content_type: 'image/jpg')
 user5.save!
 
 user6 = User.new(
-  email: "teste6@favelazap.com",
+  email: "teste6@lewagon.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
@@ -101,7 +101,7 @@ user6.avatar.attach(io: photo6, filename: 'liniker.jpg', content_type: 'image/jp
 user6.save!
 
 user7 = User.new(
-  email: "teste7@favelazap.com",
+  email: "teste7@lewagon.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
@@ -113,7 +113,7 @@ user7.avatar.attach(io: photo7, filename: 'coltrane.jpg', content_type: 'image/j
 user7.save!
 
 user8 = User.new(
-  email: "teste8@favelazap.com",
+  email: "teste8@lewagon.com",
   password: "abc123",
   reporter: "false",
   communities: ["Rocinha", "Vidigal"],
