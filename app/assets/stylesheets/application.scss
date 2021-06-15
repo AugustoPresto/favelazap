@@ -50,8 +50,8 @@ a {
 .edit-container {
   border-radius: 5px; 
   box-shadow: 1px 1px 3px $logo-dark-green;
-  color: $logo-dark-green;
-  background-image: linear-gradient(to bottom right, $logo-green, #2c973c);
+  color: white;
+  background-color: $logo-green;
 }
 
 .form-control {
@@ -77,7 +77,7 @@ a {
   padding-top: 15px;
 }
 
-h3, label {
+h3 {
   font-weight: bolder;
 }
 
@@ -88,5 +88,6 @@ h3, label {
 
 legend {
   color: $logo-dark-green;
+  font-weight: bolder;
 }
 
