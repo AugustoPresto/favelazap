@@ -26,7 +26,7 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
-    <div class="text-left">
+    <div class="text-left d-flex justify-content-around">
       <%= f.input :communities, include_hidden: false, as: :check_boxes, collection: User::COMMUNITIES %>
       <%= f.input :interests, include_hidden: false, as: :check_boxes, collection: User::INTERESTS %>
     </div>
