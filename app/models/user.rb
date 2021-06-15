@@ -16,6 +16,11 @@ class User < ApplicationRecord
   validates :interests, inclusion: { in: INTERESTS }  
 
   validates :email, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :email, format: { with: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/, message: "Invalid email" }
-  #validates :password, presence: true
+
+  def fullname
+    "#{first_name.capitalize} #{last_name.capitalize}"
+  end
 end
