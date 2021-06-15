@@ -116,12 +116,12 @@ legend {
   height: 20px;
   top: 0;
   left: 0;
-  background-color: #EAEAEA;
+  background-color: #8aec99;
   border-radius: 50rem;
 }
 
 .toggle:checked + label::before {
-  background-color: $logo-dark-green;
+  background-color: #488644;
 }
 
 .toggle + label::after {
@@ -146,6 +146,6 @@ legend {
   color: white !important; 
 }
 
-.edit-container .form-check {
+.form-check {
   padding-left: 0;
 }
