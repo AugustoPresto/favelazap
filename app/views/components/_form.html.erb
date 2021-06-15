@@ -5,8 +5,10 @@
     <%= f.input :subtitle %>
     <%= f.input :content, :input_html => {:rows => 10} %>
     <%= f.input :photo, as: :file %>
-    <%= f.input :communities, as: :check_boxes, collection: User::COMMUNITIES, include_hidden: false, input_html: { multiple: true } %>
-    <%= f.input :interests, as: :check_boxes, collection: User::INTERESTS, include_hidden: false, input_html: { multiple: true } %>
+    <div class="text-left d-flex justify-content-around">
+    <%= f.input :communities, as: :check_boxes,  include_hidden: false, input_html: { class: "toggle" }, collection: User::COMMUNITIES %>
+    <%= f.input :interests, as: :check_boxes, include_hidden: false, input_html: { class: "toggle" }, collection: User::INTERESTS %>
+    </div>
     <%= f.button :submit, class: "donwload-btn btn-block mb-3" %>
   <% end %>
 </div>

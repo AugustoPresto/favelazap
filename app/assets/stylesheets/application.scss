@@ -87,10 +87,65 @@ h3 {
 }
 
 legend {
-  color: $logo-dark-green;
+  color: white;
   font-weight: bolder;
+  text-shadow: 1px 1px 3px $logo-dark-green;
 }
 
 .btn {
   font-weight: bolder;
+}
+
+.toggle {
+  position: absolute;
+  transform: scale(0);
+}
+
+.toggle + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.toggle + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #EAEAEA;
+  border-radius: 50rem;
+}
+
+.toggle:checked + label::before {
+  background-color: $logo-dark-green;
+}
+
+.toggle + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+
+.toggle:checked + label::after {
+  left: 18px;
+}
+
+.text-muted {
+  color: white !important; 
+}
+
+.edit-container .form-check {
+  padding-left: 0;
 }

@@ -18,9 +18,9 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <div class="collection_check_boxes text-left">            
-    <%= f.input :communities, include_hidden: false, as: :check_boxes, collection: User::COMMUNITIES %>
-    <%= f.input :interests, include_hidden: false, as: :check_boxes, collection: User::INTERESTS %>
+    <div class="collection_check_boxes text-left d-flex justify-content-around">            
+    <%= f.input :communities, include_hidden: false, as: :check_boxes, input_html: { class: "toggle" }, collection: User::COMMUNITIES %>
+    <%= f.input :interests, include_hidden: false, as: :check_boxes, input_html: { class: "toggle" }, collection: User::INTERESTS %>
     </div>
   </div>
 
