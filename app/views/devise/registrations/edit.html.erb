@@ -26,10 +26,12 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+    <hr>            
     <div class="text-left d-flex justify-content-around">
       <%= f.input :communities, include_hidden: false, as: :check_boxes, input_html: { class: "toggle" }, collection: User::COMMUNITIES %>
       <%= f.input :interests, include_hidden: false, as: :check_boxes, input_html: { class: "toggle" }, collection: User::INTERESTS %>
     </div>
+    <hr>
   </div>
 
   <div class="form-actions">
