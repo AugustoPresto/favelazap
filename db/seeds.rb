@@ -68,8 +68,8 @@ user4 = User.new(
   email: "teste4@lewagon.com",
   password: "abc123",
   reporter: "false",
-  communities: ["Rocinha", "Vidigal"],
-  interests: ["Health", "Security"],
+  communities: ["Rocinha", "Vidigal", "Borel", "Formiga", "Macacos", "Alemão", "Antares", "Jacaré", "Chapadão", "Terreirão"],
+  interests: ["Sports", "Culture", "Health", "Social", "Security", "Economy", "Politics", "Others"],
   first_name: "Yuri",
   last_name: "Gravatá"
 )
@@ -92,8 +92,8 @@ user6 = User.new(
   email: "teste6@lewagon.com",
   password: "abc123",
   reporter: "false",
-  communities: ["Rocinha", "Vidigal"],
-  interests: ["Health", "Security"],
+  communities: ["Borel", "Formiga"],
+  interests: ["Social", "Economy"],
   first_name: "Alexandre",
   last_name: "CTO"
 )
@@ -104,8 +104,8 @@ user7 = User.new(
   email: "teste7@lewagon.com",
   password: "abc123",
   reporter: "false",
-  communities: ["Rocinha", "Vidigal"],
-  interests: ["Health", "Security"],
+  communities: ["Alemão", "Antares"],
+  interests: ["Politics", "Security"],
   first_name: "Someone",
   last_name: "From Le Wagon"
 )
@@ -116,8 +116,8 @@ user8 = User.new(
   email: "teste8@lewagon.com",
   password: "abc123",
   reporter: "false",
-  communities: ["Rocinha", "Vidigal"],
-  interests: ["Health", "Security"],
+  communities: ["Jacaré", "Terreirão"],
+  interests: ["Sports", "Others"],
   first_name: "Iza",
   last_name: "Meyer"
 )
