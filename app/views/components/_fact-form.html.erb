@@ -1,14 +1,17 @@
 <div class="container-fact-form">
   <div class="fact-header text-center"><h2>Post your fact</h2></div>
+  <hr>
   <%= simple_form_for fact do |f| %>
     <div calss="fact-title">
       <%= f.input :title %>
     </div>
     <%= f.input :photo, as: :file %>
+    <hr>
     <div class="text-left d-flex justify-content-around">
     <%= f.input :communities, as: :check_boxes, input_html: { class: "toggle" }, collection: User::COMMUNITIES %>
     <%= f.input :interests, as: :check_boxes, input_html: { class: "toggle" }, collection: User::INTERESTS %>
     </div>
+    <hr>
     <%= f.button :submit, class: "donwload-btn btn-block mb-3" %>
   <% end %>
 </div>

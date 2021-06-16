@@ -269,24 +269,24 @@ articles << article
 article = Article.new(
   title: "Abandoned for 10 years, Antares fight for the revitalization of park",
   subtitle: "In search of a solution, local activists went to court",
-  content: "An environment that offered fun and leisure is currently abandoned. The Ary Barroso Park, in Antares, North Zone of Rio, has suffered from neglect for over 10 years. Residents and local leaders joined together and demanded the revitalization of the park. In search of a solution, activists went to court.",
-  communities: ["Antares"],
+  content: "An environment that offered fun and leisure is currently abandoned. The Recanto do Trovador Park, in Vila Isabel, North Zone of Rio, has suffered from neglect for over 10 years. Residents and local leaders joined together and demanded the revitalization of the park. In search of a solution, activists went to court.",
+  communities: ["Macacos"],
   interests: ["Social", "Security", "Health", "Others"]
 )
-article.user = reporters[2]
+article.user = reporters[1]
 article.photo.attach(io: article_photo10, filename: 'article10.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
 
 article = Article.new(
   title: "At EDUCAP, Introduction to Tech course prepares young people for the job market",
-  subtitle: "Free of charge and with the help of volunteers, the classes are aimed at residents of Alemão",
-  content: "In a society increasingly connected to digital media, notions about technology are considered fundamental in the labor market. In order to increase plurality in this area, programmer Aline Oliveira teaches the Introduction to Technology course for young people in Complexo do Alemão, North Zone of Rio de Janeiro. Free of charge and with the help of volunteers, the classes take place at the Espaço Democrático de União, Co-existence, Learning and Prevention (EDUCAP) on Tuesdays, Thursdays and Saturdays. In fact, it currently has more than 20 students.
+  subtitle: "Free of charge and with the help of volunteers, the classes are aimed at residents of Jacaré",
+  content: "In a society increasingly connected to digital media, notions about technology are considered fundamental in the labor market. In order to increase plurality in this area, programmer Aline Oliveira teaches the Introduction to Technology course for young people in Jacaré, North Zone of Rio de Janeiro. Free of charge and with the help of volunteers, the classes take place at the Espaço Democrático de União, Co-existence, Learning and Prevention (EDUCAP) on Tuesdays, Thursdays and Saturdays. In fact, it currently has more than 20 students.
   For reasons of prevention against the coronavirus, following all the protocols guided by the health agencies, the class of students is separated into two groups that intersperse the school days. Furthermore, there is the possibility of taking the course remotely as well. However, at the moment, vacancies are unavailable.",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Jacaré"],
+  interests: ["Economy", "Culture", "Social"]
 )
-article.user = reporters.sample
+article.user = reporters[2]
 article.photo.attach(io: article_photo11, filename: 'article11.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -296,10 +296,10 @@ article = Article.new(
   subtitle: "In the profession for a decade, Waldick Júnior has already made several cuts, including famous ones",
   content: "From an early age, the verb “run” followed the routine of Waldick Francisco de Souza Júnior, 28, a resident of Fazendinha, in Complexo do Alemão. Raised by his grandmother and mother, after losing his father in childhood, “Dick”, as he is better known in the community, defined the profession he would follow when he was still young, when he observed with curiosity his cousin's work: barber. Today, he owns Barbearia do Dick , at Rua Itararé, 375.
   Since then, the constant turmoil in his daily life has become an ally in his professional trajectory. Because, due to this activity, four years ago he managed to open his first salon in Fazendinha. But, the space was not yours yet. “Four years ago I managed to open my first salon. There at the Farm. But the barbershop space was not mine yet. He paid rent every month and increased the store's price annually. There came a time when I realized that it would not be feasible to stay there”, he comments.",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Alemão"],
+  interests: ["Economy","Health", "Social"]
 )
-article.user = reporters.sample
+article.user = reporters[2]
 article.photo.attach(io: article_photo12, filename: 'article12.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -307,9 +307,9 @@ articles << article
 article = Article.new(
   title: "Promoting self-esteem, project 'O Glamour da Favela' awards Plus Size models",
   subtitle: "Organizers say the event will follow the guidelines of the Ministry of Health regarding Covid-19",
-  content: "Contributing to building a society with healthier and more diversified values, the O Glamor da Favela project will award, this Saturday (May 1st), the winners of the first edition of the Plus Size beauty contest in the communities of Rio de Janeiro. Conceived by Faby Costa, Musa Evolution Plus Size Summer Carioca Bangu 2020, Faby Costa, the event will take place at Rua do Desenhista, in Vila Aliança, in Bangu. According to Faby, the main objective of the event is to demonstrate that the essence cannot be evaluated by prejudiced standards imposed on society, which relate the standard of beauty to its weight.",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  content: "Contributing to building a society with healthier and more diversified values, the O Glamor da Favela project will award, this Saturday (Jun 19), the winners of the first edition of the Plus Size beauty contest in the communities of Rio de Janeiro. Conceived by Faby Costa, Musa Evolution Plus Size Summer Carioca Bangu 2020, Faby Costa, the event will take place at Rua do Desenhista, in Vila Aliança, in Bangu. According to Faby, the main objective of the event is to demonstrate that the essence cannot be evaluated by prejudiced standards imposed on society, which relate the standard of beauty to its weight.",
+  communities: ["Rocinha", "Vidigal", "Borel", "Formiga", "Macacos", "Alemão", "Antares", "Jacaré", "Chapadão", "Terreirão"],
+  interests: ["Economy", "Culture", "Health", "Social", "Others"]
 )
 article.user = reporters.sample
 article.photo.attach(io: article_photo13, filename: 'article13.jpg', content_type: 'image/jpg')
@@ -320,10 +320,10 @@ article = Article.new(
   title: "Pre-university entrance exam 'Só Cria' conquers new space in Rocinha",
   subtitle: "Space is named after educator Elizia Pirozi, who fought for literacy in the favela",
   content: "When it comes to learning, an environment that offers a quality structure for teaching students makes a difference. Seeking to make this differential available in the routine of Rocinha residents and students, the public entrance exam Só Cria now has its own place for classes: the Elizia Pirozi Communal Space, which opened on April 17th. With three years of existence, the project carried out in the favela in the South Zone of Rio de Janeiro had a partnership with the Popular Brigades to achieve the objective of having a physical headquarters. In honor of the struggle for education in Rocinha, the space was named after an educator who fought for quality education, developing literacy work for children and adults in the favela: Francisca Elizia de Medeiros Pirozi, who died in 2017 at the age of 77.",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Rocinha", "Vidigal"],
+  interests: ["Economy", "Culture", "Social", "Politics", "Others"]
 )
-article.user = reporters.sample
+article.user = reporters[0]
 article.photo.attach(io: article_photo14, filename: 'article14.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -333,10 +333,10 @@ article = Article.new(
   subtitle: "A 20-year-old dancer is one of the new members of the company Tivoli Ballet Skole from Denmark",
   content: "“With each performance, a new rebirth”, defines the 20-year-old dancer Luis Fernando , while describing the sensations his body awakens in each ballet performance. Born in Complexo do Alemão, in Nova Brasília, the dancer found a passion for dance through the “mission” of taking his younger sister to classes at the ViDançar social project , which takes place in the community. And now, after seven years of his first artistic bodily movements, the young man is one of the new members of the Tivoli Ballet Skole, in Denmark.
   Between one visit and another, Luis watched from afar the movements elaborated during classes. Gradually, the attentive and curious eyes captured the interest of the teacher, who proposed an invitation for him to also study and practice alongside his sister. The young man accepted, but, afraid of suffering prejudice, he shared with friends and family that the classes would be to improve his performance in Surf (a sport he practiced at the time).",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Alemão"],
+  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Others"]
 )
-article.user = reporters.sample
+article.user = reporters[2]
 article.photo.attach(io: article_photo15, filename: 'article15.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -347,10 +347,10 @@ article = Article.new(
   content: "Seeking to encourage musical production within the communities and influence the professional perspectives of the residents, the Escola de MC's da Rocinha opens new enrollments for the next class of students in the sociocultural project. Created in 2020, in an action of the Popular Brigades, a popular organization, the initiative aims to democratize culture within the favelas and use music as an instrument of social organization and struggle for the peripheral population.
   In addition to the partnership with the Popular Brigades, the Rocinha MC School has the support of TOS Record and Coletivo Rap Virus, which help coordinate classes within the project and record music in professional studios for students from initiative.
   To register for the Rocinha MC School, which runs until 06/14, you must register your data on the Google online platform . In addition, the initiative disseminates information about classes periodically on its YouTube channel.",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Rocinha", "Vidigal"],
+  interests: ["Economy", "Culture", "Social", "Others"]
 )
-article.user = reporters.sample
+article.user = reporters[0]
 article.photo.attach(io: article_photo16, filename: 'article16.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -360,22 +360,22 @@ article = Article.new(
   subtitle: "Social project has been working on behalf of residents of Complexo do Alemão",
   content: "Created by a group of friends in 2019, the Social In Action Project has been operating in Complexo do Alemão since the beginning of the pandemic. The group acted in actions that helped to lessen the impact of the Covid-19 pandemic for many families in the community. What began with a simple distribution of masks, has been extended to a large free distribution of pedagogical handouts for students in the municipal public network.
   The social impacts caused by the Covid-19 pandemic were clearly felt in the peripheral communities of Rio de Janeiro. Given the many needs, friends Ivan Villela and wife Renata Moreira, who are from Jacarepaguá, and residents of Complexo do Alemão Washington Nogueira and Nielson dos Santos, teamed up to help residents of Complexo do Alemão. “ We got tired of sitting around waiting for the state to act , people needed help. We started in April of last year with the distribution of more than 5,000 masks to the residents”, commented Ivan.",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Terreirão"],
+  interests: ["Economy", "Culture", "Health", "Social", "Politics"]
 )
-article.user = reporters.sample
+article.user = reporters[0]
 article.photo.attach(io: article_photo17, filename: 'article17.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
 
 article = Article.new(
   title: "This Friday, a social initiative delivers new baskets to families in Maré",
-  subtitle: "In partnership with Maré do Amanhã Orchestra, action distributes in 16 communities in the region",
-  content: "Prioritizing the continuity of the social initiative aimed at reducing food insecurity in homes in Complexo da Maré, the Assim Saúde Group, in partnership with the young people of the Maré do Amanhã Orchestra, carries out this Friday (14) a new action to distribute baskets for families in the favela. The campaign, which started in April and continues until June, will deliver new baskets to the 16 communities in the region, from 9:00 am to 4:00 pm. The founder and conductor of the Orchestra, Carlos Eduardo Prazeres, explains that each family receives two food baskets per month and that this amount donated by Assim Saúde is already able to help more than 7,500 people in the community in situations of extreme vulnerability and hunger.",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  subtitle: "In partnership with Macacos do Amanhã Orchestra, action distributes in 16 communities in the region",
+  content: "Prioritizing the continuity of the social initiative aimed at reducing food insecurity in homes in Morro dos Macacos, the Assim Saúde Group, in partnership with the young people of the Maré do Amanhã Orchestra, carries out this Friday (18) a new action to distribute baskets for families in the favela. The campaign, which started in April and continues until June, will deliver new baskets to the 16 communities in the region, from 9:00 am to 4:00 pm. The founder and conductor of the Orchestra, Carlos Eduardo Prazeres, explains that each family receives two food baskets per month and that this amount donated by Assim Saúde is already able to help more than 7,500 people in the community in situations of extreme vulnerability and hunger.",
+  communities: ["Macacos"],
+  interests: ["Economy", "Health", "Social", "Others"]
 )
-article.user = reporters.sample
+article.user = reporters[1]
 article.photo.attach(io: article_photo18, filename: 'article18.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -385,24 +385,24 @@ article = Article.new(
   subtitle: "Little seen in the communities of Rio, the practice brings several health benefits, body and mind",
   content: "In Morro do Vidigal, in the South Zone of the city, the arrival of a yoga project has been helping community residents in their search for peace and balance. Led by professor “Xico”, the project has been making a difference in the lives of children, young people and adults in the favela for 2 months.
   Yoga is a concept that refers to traditional physical disciplines originating in India. The word is associated with meditative practices or as a form of exercise. The Asian practice arrived at Vidigal thanks to professor Francisco Soares de Gusmão , better known as Chico , 33 years old. The instructor has been a resident of the community for 2 years, but he is already doing a lot for the favela as shown on the Parceiros do Vidiga page. After losing his job to the pandemic last year, he decided to take his knowledge and give it to the community. “It is rewarding to bring the oriental philosophy and the practice of physical exercise to people is my life mission. The students have enjoyed the classes a lot, I feel that yoga helps bring peace and a better life to the students”, commented Chico. ",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Rocinha", "Vidigal"],
+  interests: ["Sports", "Culture", "Health", "Social"]
 )
-article.user = reporters.sample
+article.user = reporters[0]
 article.photo.attach(io: article_photo19, filename: 'article19.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
 
 article = Article.new(
   title: "Project makes 'library bus' available in communities in Rio",
-  subtitle: "Livros Na Praça will park in Manguinhos and Mangueira",
+  subtitle: "Livros Na Praça will park in Jacaré and Terreirão",
   content: "When it comes to actions that enable social transformation within the communities of Rio de Janeiro, reading is certainly one of the tools that have the most power in this process of cultural development. Through projects that democratize access to the various aids it brings, young people acquire a new understanding of the world and values.
   Paving this path for nine years, the Books in the Squares initiative , by Korporativa (a company that operates in the cultural, social and environmental marketing area), promotes literary democratization through the action that provides “library-bus” at certain points from Rio de Janeiro.
   Allowing readers to borrow books this June, the project will “park” the blue library bus in the communities ofManguinhos and Hose . The initiative's visits take place from 10:00 am to 4:00 pm, complying with all safety protocols determined by the Ministry of Health.",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Terreirão", "Jacaré"],
+  interests: ["Economy", "Culture", "Social", "Others"]
 )
-article.user = reporters.sample
+article.user = reporters[0]
 article.photo.attach(io: article_photo20, filename: 'article20.jpg', content_type: 'image/jpg')
 article.save!
 articles << article
@@ -423,8 +423,8 @@ fact_photo10 = URI.open('https://img-vozdascomunidade.s3.sa-east-1.amazonaws.com
 
 fact = Fact.new(
   title: "Police continue operations, even with suspension of the STF",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Rocinha", "Vidigal", "Borel", "Formiga", "Macacos", "Alemão", "Antares", "Jacaré", "Chapadão", "Terreirão"],
+  interests: ["Social", "Security","Others"]
 )
 fact.user = reporters.sample
 fact.photo.attach(io: fact_photo1, filename: 'fact1.jpg', content_type: 'image/jpeg')
@@ -433,8 +433,8 @@ facts << fact
 
 fact = Fact.new(
   title: "Favelas register 2 new cases of Covid-19 in 24 hours",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Rocinha", "Vidigal", "Borel", "Formiga", "Macacos", "Alemão", "Antares", "Jacaré", "Chapadão", "Terreirão"],
+  interests: ["Health", "Social", "Security"]
 )
 fact.user = reporters.sample
 fact.photo.attach(io: fact_photo2, filename: 'fact2.jpg', content_type: 'image/png')
@@ -443,28 +443,28 @@ facts << fact
 
 fact = Fact.new(
   title: "Rio City Hall suspends garbage collection at Rocinha and Vidigal",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Rocinha", "Vidigal"],
+  interests: ["Economy","Health", "Social", "Security"]
 )
-fact.user = reporters.sample
+fact.user = reporters[0]
 fact.photo.attach(io: fact_photo3, filename: 'fact3.jpg', content_type: 'image/jpeg')
 fact.save!
 facts << fact
 
 fact = Fact.new(
   title: "Kombis are authorized to transport passengers at Alemão",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Alemão"],
+  interests: ["Economy", "Culture", "Social"]
 )
-fact.user = reporters.sample
+fact.user = reporters[2]
 fact.photo.attach(io: fact_photo4, filename: 'fact4.jpg', content_type: 'image/jpg')
 fact.save!
 facts << fact
 
 fact = Fact.new(
   title: "Lins: protest for the death of Kathlen Romeu happens now",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Rocinha", "Vidigal", "Borel", "Formiga", "Macacos", "Alemão", "Antares", "Jacaré", "Chapadão", "Terreirão"],
+  interests: ["Politics", "Social", "Security"]
 )
 fact.user = reporters.sample
 fact.photo.attach(io: fact_photo5, filename: 'fact5.jpg', content_type: 'image/jpeg')
@@ -473,8 +473,8 @@ facts << fact
 
 fact = Fact.new(
   title: "Community leaders meet with former president Lula this Saturday",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Rocinha", "Vidigal", "Borel", "Formiga", "Macacos", "Alemão", "Antares", "Jacaré", "Chapadão", "Terreirão"],
+  interests: ["Economy", "Culture", "Politics", "Social"]
 )
 fact.user = reporters.sample
 fact.photo.attach(io: fact_photo6, filename: 'fact6.jpg', content_type: 'image/jpg')
@@ -483,18 +483,18 @@ facts << fact
 
 fact = Fact.new(
   title: "Heavy rain disrupts water supply in Formiga and Borel",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Borel", "Formiga"],
+  interests: ["Economy", "Health", "Social"]
 )
-fact.user = reporters.sample
+fact.user = reporters[1]
 fact.photo.attach(io: fact_photo7, filename: 'fact7.jpg', content_type: 'image/jpeg')
 fact.save!
 facts << fact
 
 fact = Fact.new(
-  title: "Mass vaccination against Covid finally gets to Juramento",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  title: "Mass vaccination against Covid finally gets to all communities",
+  communities: ["Rocinha", "Vidigal", "Borel", "Formiga", "Macacos", "Alemão", "Antares", "Jacaré", "Chapadão", "Terreirão"],
+  interests: ["Health", "Social"]
 )
 fact.user = reporters.sample
 fact.photo.attach(io: fact_photo8, filename: 'fact8.jpg', content_type: 'image/jpeg')
@@ -502,21 +502,21 @@ fact.save!
 facts << fact
 
 fact = Fact.new(
-  title: "Cars are towed by City Hall this morning in Alemão",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  title: "Cars are towed by City Hall this morning in Jacaré",
+  communities: ["Jacaré"],
+  interests: ["Economy", "Social", "Security", "Others"]
 )
-fact.user = reporters.sample
+fact.user = reporters[2]
 fact.photo.attach(io: fact_photo9, filename: 'fact9.jpg', content_type: 'image/jpg')
 fact.save!
 facts << fact
 
 fact = Fact.new(
   title: "Vidigal's Vila Olímpica receives revitalization today",
-  communities: ["Juramento", "Macacos", "Rocinha", "Vidigal", "Borel", "Formiga"],
-  interests: ["Sports", "Economy", "Culture", "Health", "Social", "Security"]
+  communities: ["Rocinha", "Vidigal"],
+  interests: ["Sports", "Economy", "Culture", "Social", "Security"]
 )
-fact.user = reporters.sample
+fact.user = reporters[0]
 fact.photo.attach(io: fact_photo10, filename: 'fact10.jpg', content_type: 'image/jpg')
 fact.save!
 facts << fact
