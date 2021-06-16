@@ -1,7 +1,7 @@
 #carousel-fact {
   .carousel .carousel-item {
     height: 200px;
-    background-color: hsl(120, 75%, 15%);
+    background-color: $logo-dark-green;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     min-height: 200px;
-    opacity: 0.2;
+    opacity: 0.4;
   }
 
   .fact-title {
