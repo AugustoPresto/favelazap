@@ -28,6 +28,7 @@ gem 'pundit'
 gem 'jquery-rails'
 gem 'serviceworker-rails'
 
+gem 'geocoder'
 gem 'social-share-button'
 gem 'turbolinks_render'
 # Use Active Storage variant

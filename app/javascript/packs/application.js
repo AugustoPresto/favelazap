@@ -25,6 +25,7 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { initMapbox } from '../plugins/init_mapbox';
 //= require serviceworker-companion
 //= require jquery
 //= require jquery_ujs
@@ -43,4 +44,5 @@ else {
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+  initMapbox();
 });
