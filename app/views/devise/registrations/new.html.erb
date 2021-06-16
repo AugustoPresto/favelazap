@@ -1,7 +1,7 @@
 <div class="container-edit">
   <div class="edit-container text-center p-2 m-2 pt-10">
 
-<h3>Sign up</h3>
+<h3>Sign in</h3>
 <hr>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -9,6 +9,7 @@
 
   <div class="form-inputs text-center">
     <%= f.input :avatar, as: :file %>
+    <hr>
     <%= f.input :first_name, required: true, autofocus: true %>
     <%= f.input :last_name, required: true, autofocus: true %>
     <%= f.input :email,
