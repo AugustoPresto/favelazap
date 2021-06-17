@@ -407,6 +407,11 @@ article.photo.attach(io: article_photo20, filename: 'article20.jpg', content_typ
 article.save!
 articles << article
 
+articles.each do |arti|
+  arti.created_at -= 60*(60..4320).to_a.sample
+  arti.save!
+end
+
 puts 'creating facts...'
 facts = []
 
@@ -520,6 +525,11 @@ fact.user = reporters[0]
 fact.photo.attach(io: fact_photo10, filename: 'fact10.jpg', content_type: 'image/jpg')
 fact.save!
 facts << fact
+
+facts.each do |fac|
+  fac.created_at -= 60*(1..20).to_a.sample
+  fac.save!
+end
 
 puts 'creating comments...'
 
