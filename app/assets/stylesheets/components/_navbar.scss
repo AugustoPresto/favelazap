@@ -3,7 +3,7 @@ nav span {
 }
 
 nav {
-	background: $logo-dark-green;
+	background-image: linear-gradient($logo-dark-green, $logo-green, $logo-dark-green);
 	height: 80px;
 	width: 100%;
 	box-shadow: 0 0 0.3rem black;

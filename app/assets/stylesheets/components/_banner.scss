@@ -2,7 +2,7 @@
   padding-top: 100px;
   padding-bottom: 20px;
   padding-right: 10px;
-  background-color: $logo-green;
+  background-image: linear-gradient(to right, $logo-dark-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green, $logo-green, $logo-green,$logo-green,$logo-dark-green);
   width: 100%;
   margin: 0px;
 }
@@ -25,7 +25,7 @@
   text-align: center;
   letter-spacing: 0px;
   font-family: $font-default;
-  text-shadow: -75px -50px 1px #345333, -150px -100px 1px #93e990;
+  text-shadow: -75px -50px  #345333, -74px -49px 2px #93e990, -150px -100px 1px #93e990, -149px -99px 2px $logo-dark-green, -1px -1px 2px $logo-dark-green;
 }
 
 .headline h2 {
