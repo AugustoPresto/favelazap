@@ -9,7 +9,7 @@
             <%= image_tag "logo-grey.jpg", class: "w-100" %>
           <% end %>
           <div class="carousel-caption d-md-block">
-            <h5 class="fact-title"><strong><%= @facts.first.title %></strong></h5>
+            <h5 class="fact-title"><%= @facts.first.title %></h5>
             <p class="fact-time">Added <%= time_ago_in_words(@facts.first.created_at) %> ago</p>
             <% if @user == @facts.first.user %>
                 <div class="fact-icons">
@@ -31,7 +31,7 @@
             <%= image_tag "logo-grey.jpg", class: "w-100" %>
           <% end %>
             <div class="carousel-caption d-md-block">
-              <h5 class="fact-title"><strong><%= fact.title %></strong></h5>
+              <h5 class="fact-title"><%= fact.title %></h5>
               <p class="fact-time">Added <%= time_ago_in_words(fact.created_at) %> ago</p>
               <% if @user == fact.user %>
                 <div class="fact-icons">
