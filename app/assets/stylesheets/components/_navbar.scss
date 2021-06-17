@@ -3,7 +3,7 @@ nav span {
 }
 
 nav {
-	background-image: linear-gradient($logo-dark-green, $logo-green, $logo-dark-green);
+	background-color: $logo-dark-green;
 	height: 80px;
 	width: 100%;
 	box-shadow: 0 0 0.3rem black;
@@ -105,7 +105,7 @@ nav ul li {
 		position: fixed;
 		width: 100%;
 		height: 100vh;
-		background-image: linear-gradient(to right, $logo-dark-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green, $logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green,$logo-green, $logo-green, $logo-green,$logo-green,$logo-dark-green);
+		background-color: $logo-green;
 		top: 80px;
 		left: 100%;
 		margin-top: -20px;
