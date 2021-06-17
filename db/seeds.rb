@@ -732,3 +732,17 @@ comment = Comment.new(
 comment.user = users.sample
 comment.article = articles.sample
 comment.save!
+
+puts 'creating likes...'
+
+articles.each do |article|
+  total_users = users + reporters 
+  n = (2..total_users.size).to_a.sample
+  users_liked = total_users.sample(n)
+  users_liked.each do |user_liked|
+    likes = Like.new()
+    likes.article = article
+    likes.user = user_liked
+    likes.save!
+  end
+end
