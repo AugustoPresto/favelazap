@@ -120,12 +120,12 @@ legend {
   height: 20px;
   top: 0;
   left: 0;
-  background-color: #8aec99;
+  background-color: #b2ceb6;
   border-radius: 50rem;
 }
 
 .toggle:checked + label::before {
-  background-color: #488644;
+  background-color: #0b8d02;
 }
 
 .toggle + label::after {
