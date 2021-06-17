@@ -13,3 +13,11 @@ strong {
   color: $logo-green;
   text-shadow: 0.5px 0.5px 1px $logo-dark-green;
 }
+
+.container-news {
+  background-image: linear-gradient(to bottom right, $logo-green, $logo-dark-green);
+}
+
+.body {
+  background-color: linear-gradient(to bottom right, #32BD46, #1E481B);;
+}
