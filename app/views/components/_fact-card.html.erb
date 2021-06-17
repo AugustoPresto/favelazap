@@ -8,9 +8,9 @@
           <% else %>
             <%= image_tag "logo-grey.jpg", class: "w-100" %>
           <% end %>
+          <p class="fact-time text-center mt-2">Added <%= time_ago_in_words(@facts.first.created_at) %> ago</p>
           <div class="carousel-caption d-md-block">
             <h5 class="fact-title"><%= @facts.first.title %></h5>
-            <p class="fact-time">Added <%= time_ago_in_words(@facts.first.created_at) %> ago</p>
             <% if @user == @facts.first.user %>
                 <div class="fact-icons">
                   <%= link_to fact_path(@facts.first), method: :delete, data: {confirm: "Are you sure?"} do %>
@@ -30,9 +30,9 @@
           <% else %>
             <%= image_tag "logo-grey.jpg", class: "w-100" %>
           <% end %>
+            <p class="fact-time text-center mt-2">Added <%= time_ago_in_words(fact.created_at) %> ago</p>
             <div class="carousel-caption d-md-block">
               <h5 class="fact-title"><%= fact.title %></h5>
-              <p class="fact-time">Added <%= time_ago_in_words(fact.created_at) %> ago</p>
               <% if @user == fact.user %>
                 <div class="fact-icons">
                   <%= link_to fact_path(fact), method: :delete, data: {confirm: "Are you sure?"} do %>
