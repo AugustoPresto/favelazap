@@ -407,6 +407,32 @@ article.photo.attach(io: article_photo20, filename: 'article20.jpg', content_typ
 article.save!
 articles << article
 
+article = Article.new(
+  title: "Join the community! Save The Rango",
+  subtitle: "There are 40 products you can save from throwing out!",
+  content: "An estimated 1.3 billion tonnes of food is wasted globally each year, 1/3 of all food produced for human consumption, according to the Food and Agriculture Organization (FAO) of the United Nations and it is responsible for 8% of all greenhouse gas emissions. We are on a mission to change that and beat the WASTE - are you with us ? http://www.http://www.savetherango.com",
+  communities: ["Rocinha", "Vidigal", "Borel", "Formiga", "Macacos", "Alemão", "Antares", "Jacaré", "Chapadão", "Terreirão"],
+  interests: ["Sports", "Culture", "Health", "Social", "Security", "Economy", "Politics", "Others"]
+)
+article.user = reporters.sample
+article.photo.attach(io: File.open('app/assets/images/save.png'), filename: 'article21.png', content_type: 'image/png')
+article.save!
+articles << article
+
+article = Article.new(
+  title: "Project 'SOS Dontions' is on line",
+  subtitle: "Many people are waiting for your help. Let's Build a better world",
+  content: "Help social acts and projects by given funds. Donate food, clouthes and goods to those who really needs it. Give some of your time to help important. http://www.sosdonations.online/",
+  communities: ["Rocinha", "Vidigal", "Borel", "Formiga", "Macacos", "Alemão", "Antares", "Jacaré", "Chapadão", "Terreirão"],
+  interests: ["Sports", "Culture", "Health", "Social", "Security", "Economy", "Politics", "Others"]
+)
+article.user = reporters.sample
+article.photo.attach(io: File.open('app/assets/images/sos.png'), filename: 'article22.png', content_type: 'image/png')
+article.save!
+articles << article
+
+
+
 articles.each do |arti|
   arti.created_at -= 60*(60..4320).to_a.sample
   arti.save!
