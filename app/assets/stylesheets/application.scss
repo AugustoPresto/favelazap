@@ -60,19 +60,6 @@ a {
   font-weight: bolder;
 }
 
-.form-actions {
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px $logo-dark-green;
-}
-
-.form-actions:hover {
-  background: $logo-dark-green;
-  border-radius: 5px;
-  box-shadow: 1px 1px 10px $logo-dark-green;
-  color: $logo-green;
-}
-
 .cancel-account {
   padding-top: 15px;
 }
@@ -93,7 +80,23 @@ legend {
 }
 
 .btn {
+  color: $logo-green;
   font-weight: bolder;
+  width: 320px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px $logo-dark-green;
+}
+
+.btn:hover {
+  color: white;
+  font-weight: bolder;
+  width: 320px;
+  background-color: $logo-dark-green;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px $logo-dark-green;
+  border: normal;
+  border-color: white;
 }
 
 .toggle {
