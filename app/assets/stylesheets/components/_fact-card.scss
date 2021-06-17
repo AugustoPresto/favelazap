@@ -1,6 +1,5 @@
 #carousel-fact {
   .carousel .carousel-item {
-    height: 200px;
     background-color: $logo-dark-green;
     border-radius: 5px;
     overflow: hidden;
@@ -13,18 +12,23 @@
     object-fit: cover;
     top: 0;
     left: 0;
-    min-height: 200px;
+    min-height: 165px;
     opacity: 0.4;
   }
 
   .fact-title {
     color: white;
     text-shadow: 0 0 3px black;
+    position: absolute;
+    bottom: 20px;
   }
 
   .fact-time {
     font-size: 12px;
     color: #bbbbbb;
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
   }
 
   .fact-icons {
