@@ -15,9 +15,10 @@ nav {
 
 label.logo > img {
 	height: 48px;
-	width: 48px;
+	// width: 48px;
 	margin-top: 15px;
 	margin-left: 30px;
+	object-fit: cover;
 }
 
 img > a:hover {
