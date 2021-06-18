@@ -51,8 +51,9 @@ ul {
   padding: 0.1rem 0.5rem;
   background-color: $logo-dark-green;
   color: white;
-  border: 1px solid $logo-green;
   margin-right: 0.6rem;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .comment-content {
