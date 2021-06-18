@@ -82,22 +82,26 @@ legend {
 .btn {
   color: $logo-green;
   font-weight: bolder;
-  width: 320px;
+  
+  padding-left: 100px;
+  padding-right: 100px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 1px 1px 3px $logo-dark-green;
+  text-align: center;
 }
 
 .btn:hover {
   color: white;
-  font-weight: bolder;
-  width: 320px;
+  font-weight: bolder;  
   background-color: $logo-dark-green;
   border-radius: 5px;
   box-shadow: 1px 1px 3px $logo-dark-green;
   border: normal;
   border-color: white;
+    
 }
+
 
 .toggle {
   position: absolute;
