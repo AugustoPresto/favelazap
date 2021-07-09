@@ -3,24 +3,23 @@
     background-color: $logo-dark-green;
     border-radius: 5px;
     overflow: hidden;
-    position: relative;
-    height: 165px;
+    position: inherit;
+    height: 200px;
   }
 
   .carousel-item img {
     position: absolute;
-    object-fit: cover;
+    object-fit: center;
     top: 0;
     left: 0;
-    min-height: 165px;
+    min-height: 200px;
     opacity: 0.4;
-    width: 70px;
   }
 
   .fact-title {
     color: white;
     text-shadow: 0 0 3px black;
-    position: absolute;
+    position: center;
     bottom: 20px;
     font-weight: bolder;
   }
