@@ -15,7 +15,6 @@
   color: $page-white;
   margin: 3px 3px 0 3px;
   border-radius: 3px;
-  text-align: center;
   font-size: 100%;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
@@ -29,4 +28,10 @@
 .comunity{
   display: flex;
   justify-content: space-around;
+}
+
+.list-of-comunities {
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
 }

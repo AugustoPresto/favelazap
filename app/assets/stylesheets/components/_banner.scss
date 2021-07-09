@@ -4,32 +4,21 @@
   padding-right: 10px;
   background-color: $logo_green;
   width: 100%;
-  margin: 0px;
 }
 
-.elements-organaizer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.headline {
-  display: flex;
-  align-items: center;
-}
-
-.headline h1 {
+.banner h1 {
   color: $page-white;
-  font-size: 25px;
+  font-size: 48px;
   text-align: center;
   letter-spacing: 0px;
   font-family: $font-default;
-  text-shadow: -75px -50px  #345333, -74px -49px 2px #93e990, -150px -100px 1px #93e990, -149px -99px 2px $logo-dark-green, -1px -1px 2px $logo-dark-green;
+  text-shadow: -1px -1px 2px $logo-dark-green;
 }
 
-.headline h2 {
-  color: $logo-dark-green;
-  font-size: 15px;
+.banner h2 {
+  color: $logo-dark-green;  
+  text-align: center;
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: 0.5px;
   font-family: 'Baloo 2', cursive;
