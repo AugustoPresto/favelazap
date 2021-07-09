@@ -41,3 +41,6 @@ yarn-debug.log*
 *.swp
 .DS_Store
 .env*
+
+# Ignore ngrok files
+ngrok-stable-windows-amd64.exe
