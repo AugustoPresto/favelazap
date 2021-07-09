@@ -2,15 +2,22 @@
 //  // background-color: rgba($color: $logo-green, $alpha: 1);
 // }
 
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 300px;
+}
+
 .card-img-top {
   max-height: 180px !important;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .card-body{
   position: relative;
   padding: 0.7rem 0.25rem 0.3rem 0.25rem;
-  
 }
 
 .created-at-card {
