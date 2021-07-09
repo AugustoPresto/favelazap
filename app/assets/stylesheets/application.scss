@@ -45,6 +45,8 @@ a {
 .container-edit {
   padding: 10px;
   font-family: $font-default;
+  display: flex;
+  justify-content: center;
 }
 
 .edit-container {
@@ -52,6 +54,7 @@ a {
   box-shadow: 1px 1px 3px $logo-dark-green;
   color: white;
   background-color: $logo-green;
+  width: 375px;
 }
 
 .form-control {
@@ -101,7 +104,6 @@ legend {
   border-color: white;
     
 }
-
 
 .toggle {
   position: absolute;
