@@ -2,7 +2,7 @@
 
 A news solution for poor communities, connecting local journalists and inhabitants of the favelas in Rio de Janeiro. FavelaZap is an app where local journalists create content for local readers.
 
-##### How it works?
+#### How it works?
 A reporter is hired to write Articles or urgent news, which we named as Facts, about the community she/he lives or knows a lot about.
 Readers can easily subscribe and select which communities and interests she/he wants to read about. It can be how many thay want! After reading, the user can comment, like or share the news.
 
