@@ -57,3 +57,21 @@
     color: $logo-dark-green;
   }
 }
+
+@media(min-width: 768px) {
+  #carousel-fact {
+    .carousel .carousel-item {
+      height: 300px;
+    }
+
+    .fact-icons {
+      left: 335px;
+    }
+
+    .fact-title {
+      position: absolute;
+      font-size: 40px;
+      bottom: 60px;
+    }
+  }
+}
